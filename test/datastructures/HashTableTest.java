@@ -8,6 +8,7 @@ package datastructures;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import utility.TestCase;
+import utility.Utility;
 
 /**
  *
@@ -38,6 +39,20 @@ public class HashTableTest extends TestCase {
 			"value2",
 			"value3",
 		};
+		
+		HashTable hashTable = new HashTable();
+		for (int i = 0; i < indices.length; i++) {
+			hashTable.insert(indices[i], values[i]);
+		}
+		for (int i = 0; i < indices.length; i++) {
+			assertEquals(values[i], hashTable.get(indices[i]));
+		}
+	}
+	
+	@Test
+	public void testMediumInsertsAndGets() {
+		String[] indices = this.generateRandomStrings(50, 10);
+		String[] values = this.generateRandomStrings(50, 50);
 		
 		HashTable hashTable = new HashTable();
 		for (int i = 0; i < indices.length; i++) {
