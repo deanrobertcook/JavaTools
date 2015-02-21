@@ -20,7 +20,12 @@ public class HashTable {
 	
 	public void insert(String index, String value) {
 		int hash = this.sumCharValueHash(index);
-		this.backingArray[hash] = value;
+		//no collision
+		if (this.backingArray[hash] == null) {
+			this.backingArray[hash] = value;
+		} else {
+			
+		}
 	}
 	
 	private int sumCharValueHash(String index) {
