@@ -22,7 +22,7 @@ public class MergeSortTest extends TestCase {
 			MergeSort.sort(array);
 			this.stopTimer();
 			System.out.println("Sorted array of length: " + array.length + " in: " + this.getTime() + "ms");
-			if (!this.arrayInNumericalOrder(array)) {
+			if (!this.isArrayInNumericalOrder(array)) {
 				fail("Array not properly sorted");
 			}
 		}
