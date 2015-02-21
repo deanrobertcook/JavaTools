@@ -16,6 +16,12 @@ public class Utility {
 		}
 	}
 	
+	public static void printArray(String[] A) {
+		for(int i = 0; i < A.length; i++) {
+			System.out.println(A[i]);
+		}
+	}
+	
 	public static int sumOfArray(int[] A) {
 		int sum = 0;
 		for(int i = 0; i < A.length; i++) {
