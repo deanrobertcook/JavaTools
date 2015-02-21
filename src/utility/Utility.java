@@ -72,4 +72,15 @@ public class Utility {
 		return asciiArray;
 	}
 	
+	/**
+	 * Wrapper function for Math.pow() for working only with integers. Saves
+	 * tedious casting.
+	 * @param base
+	 * @param exponent
+	 * @return 
+	 */
+	public static int pow(int base, int exponent) {
+		return (int) Math.pow((double) base, (double) exponent);
+	}
+	
 }
