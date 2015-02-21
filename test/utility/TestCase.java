@@ -11,6 +11,12 @@ public class TestCase {
 
 	private long startTime;
 	private long endTime;
+	
+	private final Random randomGenerator;
+	
+	protected TestCase() {
+		this.randomGenerator = new Random();
+	}
 
 	//Creates 7 random arrays of sizes from 0 to 100000 with largest random
 	//value range
@@ -23,8 +29,6 @@ public class TestCase {
 	public int[][] createScaledArrays(int numArrays, int sizeMultiplier, int rangeOfRandomValues) {
 		int[][] arrays = new int[numArrays][];
 
-		Random randomGenerator = new Random();
-
 		for (int i = 0; i < numArrays; i++) {
 			if (i == 0) {
 				arrays[i] = new int[0];
@@ -33,9 +37,9 @@ public class TestCase {
 				arrays[i] = new int[arraySize];
 				for (int j = 0; j < arraySize; j++) {
 					if (rangeOfRandomValues == -1) {
-						arrays[i][j] = randomGenerator.nextInt();
+						arrays[i][j] = this.randomGenerator.nextInt();
 					} else {
-						arrays[i][j] = randomGenerator.nextInt() % rangeOfRandomValues;
+						arrays[i][j] = this.randomGenerator.nextInt() % rangeOfRandomValues;
 					}
 				}
 			}
@@ -44,15 +48,14 @@ public class TestCase {
 	}
 	
 	public int[] createRandomArray(int minLength, int maxLength, int minVal, int maxVal) {
-		Random randomGenerator = new Random();
-		int arrayLength = randomGenerator.nextInt(maxLength + 1);
+		int arrayLength = this.randomGenerator.nextInt(maxLength + 1);
 		arrayLength = arrayLength + minLength;
 		arrayLength = arrayLength % maxLength + 1;
 		
 		int[] array = new int[arrayLength];
 		
 		for (int i = 0; i < array.length; i++) {
-			int rand = randomGenerator.nextInt();
+			int rand = this.randomGenerator.nextInt();
 			int intRange = maxVal - minVal;
 			rand = rand % ((intRange + 2) / 2);
 			rand = rand + (intRange / 2) + minVal;
@@ -78,12 +81,33 @@ public class TestCase {
 		return this.endTime - this.startTime;
 	}
 
-	public boolean arrayInNumericalOrder(int[] A) {
+	public boolean isArrayInNumericalOrder(int[] A) {
 		for (int i = 0; i < A.length - 1; i++) {
 			if (A[i] > A[i + 1]) {
 				return false;
 			}
 		}
 		return true;
+	}
+	
+	public String[] generateRandomStrings(int numStrings, int maxStringLength) {
+		String[] strings = new String[numStrings];
+		for (int i = 0; i < strings.length; i++) {
+			int stringLength = this.randomGenerator.nextInt(maxStringLength + 1);
+			strings[i] = this.generateRandomAsciiString(stringLength);
+		}
+		return strings;
+	}
+	
+	public String generateRandomAsciiString(int length) {
+		char[] stringAsChars = new char[length];
+		for (int i = 0; i < stringAsChars.length; i++) {
+			//first ASCII = 32 (space), 256 - 32 = 224
+			int asciiCode = this.randomGenerator.nextInt(224);
+			asciiCode = asciiCode + 32;
+			stringAsChars[i] = (char) asciiCode;
+		}
+		String randomString = String.copyValueOf(stringAsChars);
+		return randomString;
 	}
 }
