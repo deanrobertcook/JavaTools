@@ -1,4 +1,4 @@
-package codingpractice.codility;
+package codility;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package codingpractice.codewars;
+package codewars;
 
 import utility.Utility;
 

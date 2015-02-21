@@ -1,4 +1,4 @@
-package codingpractice.codility;
+package codility;
 
 import utility.MergeSort;
 import java.util.Arrays;

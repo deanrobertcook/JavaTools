@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package codingpractice.codility;
+package codility;
 
 import utility.Utility;
 

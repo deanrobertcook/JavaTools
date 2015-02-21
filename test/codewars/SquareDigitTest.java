@@ -1,5 +1,6 @@
-package codingpractice.codewars;
+package codewars;
 
+import codewars.SquareDigit;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

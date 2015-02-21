@@ -1,5 +1,6 @@
-package codingpractice.codility;
+package codility;
 
+import codility.EquiLeader;
 import java.util.Random;
 import org.junit.Test;
 import static org.junit.Assert.*;

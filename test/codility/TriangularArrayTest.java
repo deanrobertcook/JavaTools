@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package codingpractice.codility;
+package codility;
 
+import codility.TriangularArray;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

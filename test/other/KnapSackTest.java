@@ -1,5 +1,6 @@
-package codingpractice;
+package other;
 
+import other.KnapSack;
 import utility.Utility;
 import org.junit.Test;
 import static org.junit.Assert.*;

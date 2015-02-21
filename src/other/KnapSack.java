@@ -1,4 +1,4 @@
-package codingpractice;
+package other;
 
 /**
  * Class representing a Knapsack with various different implementations
