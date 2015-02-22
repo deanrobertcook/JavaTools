@@ -5,13 +5,24 @@ package datastructures;
  * @author dean
  */
 public class LinkedList<E> implements List<E> {
-	public LinkedList (){
-		
+
+	private Node<E> first;
+	private Node<E> current;
+	private Node<E> last;
+
+	public LinkedList() {
+		this.first = new Node<>();
+		this.last = this.first;
 	}
-	
+
 	@Override
 	public void insert(E element) {
-		throw new UnsupportedOperationException("Not supported yet."); 
+		if (this.first == this.last && this.first.isEmpty()) { //empty list
+			this.first.update(element);
+		} else {
+			this.last.insertAfter(element);
+			this.last = this.last.getNext();
+		}
 	}
 
 	@Override
@@ -22,8 +33,8 @@ public class LinkedList<E> implements List<E> {
 	@Override
 	public int search(E element) {
 		throw new UnsupportedOperationException("Not supported yet.");
-	}	
-	
+	}
+
 	@Override
 	public void delete(int index) {
 		throw new UnsupportedOperationException("Not supported yet.");
@@ -41,7 +52,16 @@ public class LinkedList<E> implements List<E> {
 
 	@Override
 	public E get(int index) {
-		throw new UnsupportedOperationException("Not supported yet.");
+		this.current = this.first;
+		int count = 0;
+		while (this.current.hasNext() && count < index) {
+			this.current = this.current.getNext();
+			count++;
+		}
+		if (count == index) {
+			return this.current.get();
+		}
+		return null;
 	}
 
 	@Override
