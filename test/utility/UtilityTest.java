@@ -12,6 +12,11 @@ import static org.junit.Assert.*;
 public class UtilityTest extends TestMethods {
 
 	@Test
+	public void scribbleTest() {
+		System.out.println(11/2);
+	}
+	
+	@Test
 	public void testFindPlaceValue() {
 		int[] testInputs = {
 			10000, 8964, 5, 717322, 0
