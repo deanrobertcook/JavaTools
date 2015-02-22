@@ -6,31 +6,40 @@ package utility;
  */
 public class Utility {
 
+	public static <E> void printArray(E[] A) {
+		int columnLength = 7;
+		System.out.println("Array Size: " + A.length);
+		System.out.printf("%-" + (columnLength + 2) + "s%s\n", "Index", "Value");
+		for (int i = 0; i < A.length; i++) {
+			System.out.printf("%-" + columnLength + "s%s;\n", "A[" + i + "]", "= " + A[i]);
+		}
+		System.out.println("------------------------------------");
+	}
+	
 	public static void printArray(int[] A) {
-		System.out.println("Array Size: " + A.length);
-		System.out.printf("%-10s%s\n", "Index", "Value");
-		for (int i = 0; i < A.length; i++) {
-			System.out.printf("%-10s %d;\n", "A[" + i + "] = ", A[i]);
-		}
-		System.out.println("------------------------------------");
+		Integer[] B = toObject(A);
+		printArray(B);
 	}
-
+	
 	public static void printArray(long[] A) {
-		System.out.println("Array Size: " + A.length);
-		System.out.printf("%-10s%s\n", "Index", "Value");
-		for (int i = 0; i < A.length; i++) {
-			System.out.printf("%-10s %d;\n", "A[" + i + "] = ", A[i]);
-		}
-		System.out.println("------------------------------------");
+		Long[] B = toObject(A);
+		printArray(B);
 	}
-
-	public static void printArray(String[] A) {
-		System.out.println("Array Size: " + A.length);
-		System.out.printf("%-10s%s\n", "Index", "Value");
+	
+	public static Integer[] toObject(int[] A) {
+		Integer[] B = new Integer[A.length];
 		for (int i = 0; i < A.length; i++) {
-			System.out.printf("%-10s %s;\n", "A[" + i + "] = ", A[i]);
+			B[i] = A[i];
 		}
-		System.out.println("------------------------------------");
+		return B;
+	}
+	
+	public static Long[] toObject(long[] A) {
+		Long[] B = new Long[A.length];
+		for (int i = 0; i < A.length; i++) {
+			B[i] = A[i];
+		}
+		return B;
 	}
 
 	public static void printMatrix(int[][] matrix) {

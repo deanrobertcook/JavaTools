@@ -13,7 +13,15 @@ public class UtilityTest extends TestMethods {
 
 	@Test
 	public void scribbleTest() {
-		System.out.println(11/2);
+		String[] array = this.randomStrings(10, 10);
+		Utility.printArray(array);
+	}
+	
+	@Test
+	public void testPrintMatrix() {
+		int[][] matrix = this.randomIntegerArrays(6, 3, 3, -100, 100);
+		Utility.printMatrix(matrix);
+		System.out.println("Check [2][0]:" + matrix[2][0]);
 	}
 	
 	@Test
@@ -51,12 +59,5 @@ public class UtilityTest extends TestMethods {
 				assertEquals(array[array.length - 1], valueAtMax);
 			}			
 		}
-	}
-	
-	@Test
-	public void testPrintMatrix() {
-		int[][] matrix = this.randomIntegerArrays(6, 3, 3, -100, 100);
-		Utility.printMatrix(matrix);
-		System.out.println("Check [2][0]:" + matrix[2][0]);
 	}
 }
