@@ -22,6 +22,32 @@ public class Utility {
 		}
 	}
 	
+	public static int findMinimum(int[] A) {
+		int minPos = 0;
+		int lowestVal = A[0];
+		for (int i = 1; i < A.length; i++) {
+			int valAtCurrent = A[i];
+			if (valAtCurrent < lowestVal) {
+				minPos = i;
+				lowestVal = A[i];
+			}
+		}
+		return minPos;
+	}
+	
+	public static int findMaximum(int[] A) {
+		int maxPos = 0;
+		int highestVal = A[0];
+		for (int i = 1; i < A.length; i++) {
+			int valAtCurrent = A[i];
+			if (valAtCurrent > highestVal) {
+				maxPos = i;
+				highestVal = A[i];
+			}
+		}
+		return maxPos;
+	}
+	
 	public static int sumOfArray(int[] A) {
 		int sum = 0;
 		for(int i = 0; i < A.length; i++) {

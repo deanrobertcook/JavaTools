@@ -1,5 +1,6 @@
 package utility;
 
+import java.util.Arrays;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -7,7 +8,7 @@ import static org.junit.Assert.*;
  *
  * @author dean
  */
-public class UtilityTest {
+public class UtilityTest extends TestCase {
 	@Test
 	public void testFindPlaceValue() {
 		System.out.println("findPlaceValue");
@@ -34,6 +35,22 @@ public class UtilityTest {
 		};
 		int[] intVals = Utility.findIntValuesOfStringCharacters(testString);
 		assertArrayEquals(expectedVals, intVals);
+	}
+	
+	@Test
+	public void testFindMinimumAndMax() {
+		int[][] arrays = this.createRandomArrays(1000, 100, 10);		
+		for (int[] array : arrays) {
+			int testMin = Utility.findMinimum(array);
+			int valueAtMin = array[testMin];
+			int testMax = Utility.findMaximum(array);
+			int valueAtMax = array[testMax];
+			
+			Arrays.sort(array);
+			assertEquals(array[0], valueAtMin);
+			assertEquals(array[array.length - 1], valueAtMax);
+		}
+		
 	}
 	
 }
