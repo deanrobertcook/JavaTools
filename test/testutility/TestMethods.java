@@ -131,6 +131,4 @@ public class TestMethods {
 		String randomString = String.copyValueOf(stringAsChars);
 		return randomString;
 	}
-
-	
 }

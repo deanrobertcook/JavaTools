@@ -19,7 +19,7 @@ public class Utility {
 		}
 		System.out.println("------------------------------------");
 	}
-	
+
 	public static void printArray(long[] A) {
 		System.out.println("Array Size: " + A.length);
 		System.out.printf("%-10s%s\n", "Index", "Value");
@@ -38,7 +38,33 @@ public class Utility {
 		System.out.println("------------------------------------");
 	}
 
-	public static int findMinimum(int[] A) {
+	public static void printMatrix(int[][] matrix) {
+		int columnWidth = 8;
+		int matrixWidth = matrix.length;
+		int[] arrayLengths = new int[matrixWidth];
+		for (int i = 0; i < arrayLengths.length; i++) {
+			arrayLengths[i] = matrix[i].length;
+		}
+		int matrixHeight = arrayLengths[Utility.findMaximumPos(arrayLengths)];
+		
+		System.out.println("Matrix size: " + matrixHeight + "x" + matrixWidth);
+		System.out.printf("%-"+ columnWidth +"s", "");
+		for (int x = 0; x < matrixWidth; x++) {
+			System.out.printf("%-"+ columnWidth +"s", "[" + x + "][y]");
+		}
+		System.out.printf("\n");
+		
+		for (int y = 0; y < matrixHeight; y++) {
+			System.out.printf("%-"+ columnWidth +"s", "[x][" + y + "]");
+			for (int x = 0; x < matrixWidth; x++) {
+				System.out.printf("%-"+ columnWidth +"d", matrix[x][y]);
+			}
+			System.out.printf("\n");
+		}
+		
+	}
+
+	public static int findMinimumPos(int[] A) {
 		if (A.length > 0) {
 			int minPos = 0;
 			int lowestVal = A[0];
@@ -54,7 +80,7 @@ public class Utility {
 		return -1;
 	}
 
-	public static int findMaximum(int[] A) {
+	public static int findMaximumPos(int[] A) {
 		if (A.length > 0) {
 			int maxPos = 0;
 			int highestVal = A[0];

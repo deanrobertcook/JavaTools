@@ -36,9 +36,9 @@ public class UtilityTest extends TestMethods {
 		int[][] arrays = this.randomIntegerArrays(numArrays, minLengths, maxLengths, minVals, maxVals);
 		for (int[] array : arrays) {
 			if (array.length > 0) {
-				int testMin = Utility.findMinimum(array);
+				int testMin = Utility.findMinimumPos(array);
 				int valueAtMin = array[testMin];
-				int testMax = Utility.findMaximum(array);
+				int testMax = Utility.findMaximumPos(array);
 				int valueAtMax = array[testMax];
 
 				Arrays.sort(array);
@@ -46,5 +46,12 @@ public class UtilityTest extends TestMethods {
 				assertEquals(array[array.length - 1], valueAtMax);
 			}			
 		}
+	}
+	
+	@Test
+	public void testPrintMatrix() {
+		int[][] matrix = this.randomIntegerArrays(6, 3, 3, -100, 100);
+		Utility.printMatrix(matrix);
+		System.out.println("Check [2][0]:" + matrix[2][0]);
 	}
 }

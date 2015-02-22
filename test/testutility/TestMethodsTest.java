@@ -60,7 +60,7 @@ public class TestMethodsTest extends TestMethods {
 				Assert.fail("Array length outside of specified");
 			}
 
-			int arrayMinPos = Utility.findMinimum(A);
+			int arrayMinPos = Utility.findMinimumPos(A);
 			if (arrayMinPos > 0 && A[arrayMinPos] < minVal) {
 				this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
 				System.out.println("Array Defined Min: " + minVal);
@@ -68,7 +68,7 @@ public class TestMethodsTest extends TestMethods {
 				Utility.printArray(A);
 				Assert.fail("Minimum value falls below defined range");
 			}
-			int arrayMaxPos = Utility.findMaximum(A);
+			int arrayMaxPos = Utility.findMaximumPos(A);
 			if (arrayMinPos > 0 && A[arrayMaxPos] > maxVal) {
 				this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
 				System.out.println("Array Defined Max: " + maxVal);
