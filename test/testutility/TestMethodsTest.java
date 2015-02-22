@@ -27,7 +27,32 @@ public class TestMethodsTest extends TestMethods {
 			}
 			
 			int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
-			if (A.length < minLength || A.length > maxLength) {
+			this.checkArrayIsinSpecifiedRanges(A, minLength, maxLength, minVal, maxVal);
+		}
+	}
+
+	@Test
+	public void testRandomIntegersRangeGreaterThanIntegerStorage() {
+		int minLength = 33;
+		int maxLength = 86;
+		int minVal = -1163510201;
+		int maxVal = 1816014807;
+		int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
+		this.checkArrayIsinSpecifiedRanges(A, minLength, maxLength, minVal, maxVal);
+	}
+	
+	@Test
+	public void testRandomIntegersFixedArrayLength() {
+		int minLength = 50;
+		int maxLength = 50;
+		int minVal = 100;
+		int maxVal = 100;
+		int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
+		this.checkArrayIsinSpecifiedRanges(A, minLength, maxLength, minVal, maxVal);
+	}
+	
+	private void checkArrayIsinSpecifiedRanges(int[] A, int minLength, int maxLength, int minVal, int maxVal) {
+		if (A.length < minLength || A.length > maxLength) {
 				this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
 				System.out.println("Array MaxLength: " + maxLength);
 				System.out.println("Array Length: " + A.length);
@@ -51,7 +76,6 @@ public class TestMethodsTest extends TestMethods {
 				Utility.printArray(A);
 				Assert.fail("Maximum value falls above defined range");
 			}
-		}
 	}
 	
 	private void printRandomIntegersParameters(int minLength, int maxLength, int minVal, int maxVal) {
@@ -60,38 +84,5 @@ public class TestMethodsTest extends TestMethods {
 		System.out.println("int minVal = " + minVal + ";");
 		System.out.println("int maxVal = " + maxVal + ";");
 		System.out.println("------------------------------");
-	}
-
-	@Test
-	public void testRandomIntegersRangeGreaterThanIntegerStorage() {
-		int minLength = 33;
-		int maxLength = 86;
-		int minVal = -1163510201;
-		int maxVal = 1816014807;
-		int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
-		if (A.length < minLength || A.length > maxLength) {
-			this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
-			System.out.println("Array MaxLength: " + maxLength);
-			System.out.println("Array Length: " + A.length);
-			System.out.println("Array MinLength: " + minLength);
-			Assert.fail("Array length outside of specified");
-		}
-
-		int arrayMinPos = Utility.findMinimum(A);
-		if (arrayMinPos > 0 && A[arrayMinPos] < minVal) {
-			this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
-			System.out.println("Array Defined Min: " + minVal);
-			System.out.println("Array Min Value: " + A[arrayMinPos]);
-			Utility.printArray(A);
-			Assert.fail("Minimum value falls below defined range");
-		}
-		int arrayMaxPos = Utility.findMaximum(A);
-		if (arrayMinPos > 0 && A[arrayMaxPos] > maxVal) {
-			this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
-			System.out.println("Array Defined Max: " + maxVal);
-			System.out.println("Array Max Value: " + A[arrayMaxPos]);
-			Utility.printArray(A);
-			Assert.fail("Maximum value falls above defined range");
-		}
 	}
 }
