@@ -12,7 +12,7 @@ public class TestMethods {
 	private long startTime;
 	private long endTime;
 
-	private final Random randomGenerator;
+	protected final Random randomGenerator;
 
 	public TestMethods() {
 		this.randomGenerator = new Random();
@@ -58,18 +58,21 @@ public class TestMethods {
 
 	public int[] randomIntegers(int minLength, int maxLength, int minVal, int maxVal) {
 		int arrayLength = this.randomGenerator.nextInt(maxLength + 1);
-		
-		arrayLength = arrayLength % minLength;
-		arrayLength = arrayLength + minLength;
+		if (minLength > 0) {
+			int lengthRange = maxLength - minLength + 1;
+			arrayLength =  arrayLength % lengthRange;
+			arrayLength = arrayLength + minLength;
+		}
 
 		int[] array = new int[arrayLength];
 
+		
+		long intRange = (long)maxVal - (long)minVal;
 		for (int i = 0; i < array.length; i++) {
-			int rand = this.randomGenerator.nextInt();
-			int intRange = maxVal - minVal;
+			long rand = this.randomGenerator.nextInt();
 			rand = rand % ((intRange + 2) / 2);
 			rand = rand + (intRange / 2) + minVal;
-			array[i] = rand;
+			array[i] = (int)rand;
 		}
 		return array;
 	}
