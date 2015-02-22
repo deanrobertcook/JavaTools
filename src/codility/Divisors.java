@@ -1,12 +1,12 @@
 package codility;
 
 import utility.Primes;
-import utility.Utility;
+import utility.Util;
 
 public class Divisors {
 	public int[] solution(int[] A) {
 		int[] nonDivisors = new int[A.length];
-		int maxVal = A[Utility.findMaximumPos(A)]; //runs in N time
+		int maxVal = A[Util.findMaximumPos(A)]; //runs in N time
 		int[] occurences = new int[maxVal + 1];
 		for (int i = 0; i < A.length; i++) {
 			occurences[A[i]] ++;

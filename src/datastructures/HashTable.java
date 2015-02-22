@@ -1,6 +1,6 @@
 package datastructures;
 
-import utility.Utility;
+import utility.Util;
 
 /**
  *

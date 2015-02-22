@@ -2,7 +2,7 @@ package testutility;
 
 import org.junit.Assert;
 import org.junit.Test;
-import utility.Utility;
+import utility.Util;
 
 /**
  * A class to test the test methods!
@@ -60,20 +60,20 @@ public class TestMethodsTest extends TestMethods {
 				Assert.fail("Array length outside of specified");
 			}
 
-			int arrayMinPos = Utility.findMinimumPos(A);
+			int arrayMinPos = Util.findMinimumPos(A);
 			if (arrayMinPos > 0 && A[arrayMinPos] < minVal) {
 				this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
 				System.out.println("Array Defined Min: " + minVal);
 				System.out.println("Array Min Value: " + A[arrayMinPos]);
-				Utility.printArray(A);
+				Util.printArray(A);
 				Assert.fail("Minimum value falls below defined range");
 			}
-			int arrayMaxPos = Utility.findMaximumPos(A);
+			int arrayMaxPos = Util.findMaximumPos(A);
 			if (arrayMinPos > 0 && A[arrayMaxPos] > maxVal) {
 				this.printRandomIntegersParameters(minLength, maxLength, minVal, maxVal);
 				System.out.println("Array Defined Max: " + maxVal);
 				System.out.println("Array Max Value: " + A[arrayMaxPos]);
-				Utility.printArray(A);
+				Util.printArray(A);
 				Assert.fail("Maximum value falls above defined range");
 			}
 	}

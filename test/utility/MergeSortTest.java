@@ -29,7 +29,7 @@ public class MergeSortTest extends TestMethods {
 		}
 		
 		long[] times = this.getTimes(0, arrays.length - 1);
-		Utility.printArray(times);
+		Util.printArray(times);
 	}
 	
 	@Test
@@ -45,7 +45,7 @@ public class MergeSortTest extends TestMethods {
 		}
 		
 		long[] times = this.getTimes(0, arrays.length - 1);
-		Utility.printArray(times);
+		Util.printArray(times);
 	}
 	
 }

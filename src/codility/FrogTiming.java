@@ -5,7 +5,7 @@
  */
 package codility;
 
-import utility.Utility;
+import utility.Util;
 
 /**
  *
@@ -16,7 +16,7 @@ public class FrogTiming {
 	//int[] A = {1, 3, 1, 4, 2, 3, 5, 4};
 	public int solution(int X, int[] A) {
         int[] leavesFallen = new int[X + 1];
-		int sumOfCrossableRiver = Utility.sumOfIntegers(X);
+		int sumOfCrossableRiver = Util.sumOfIntegers(X);
 		int sumLeavesFallen = 0;
 		
 		for (int i = 0; i < A.length; i++) {

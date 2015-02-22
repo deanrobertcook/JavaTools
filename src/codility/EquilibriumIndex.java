@@ -5,7 +5,7 @@
  */
 package codility;
 
-import utility.Utility;
+import utility.Util;
 
 /**
  *
@@ -20,8 +20,8 @@ public class EquilibriumIndex {
 			int split = nextToCheck[i];
 			if (split > 0 && split < A.length - 1) {
 				System.out.println("Split: " + split);
-				int sumLeft = Utility.sumOfArraySlice(A, 0, split);
-				int sumRight = Utility.sumOfArraySlice(A, split + 1, A.length);
+				int sumLeft = Util.sumOfArraySlice(A, 0, split);
+				int sumRight = Util.sumOfArraySlice(A, split + 1, A.length);
 				System.out.println(sumLeft);
 				System.out.println(sumRight);
 				if (sumLeft == sumRight) {

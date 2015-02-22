@@ -5,7 +5,7 @@
  */
 package codility;
 
-import utility.Utility;
+import utility.Util;
 
 /**
  *

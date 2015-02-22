@@ -1,7 +1,7 @@
 package other;
 
 import other.KnapSack;
-import utility.Utility;
+import utility.Util;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -36,7 +36,7 @@ public class KnapSackTest {
 		knapsack.fillKnapsackWithItems(items);
 		
 		System.out.println("Items in knapsack:");
-		Utility.printArray(knapsack.getKnapsackContents());
+		Util.printArray(knapsack.getKnapsackContents());
 		
 		int expectedBestCapacity = 163;
 		assertEquals(expectedBestCapacity, knapsack.getKnapsackCapacity());

@@ -1,6 +1,6 @@
 package other;
 
-import utility.Utility;
+import utility.Util;
 
 /**
  * Class representing a Knapsack with various different implementations
@@ -34,7 +34,7 @@ public class KnapSack {
 	public void fillKnapsackWithItems(int[] allItems) {
 		this.knapsack = new int[allItems.length];
 		this.dynamicAlgorithm(allItems);
-		Utility.printMatrix(this.solutionTable);
+		Util.printMatrix(this.solutionTable);
 		this.searchSolutionTable(allItems, knapsackSize,  allItems.length);
 	}
 	

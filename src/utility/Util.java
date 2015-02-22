@@ -4,7 +4,7 @@ package utility;
  *
  * @author dean
  */
-public class Utility {
+public class Util {
 
 	public static <E> void printArray(E[] A) {
 		int columnLength = 7;
@@ -49,7 +49,7 @@ public class Utility {
 		for (int i = 0; i < arrayLengths.length; i++) {
 			arrayLengths[i] = matrix[i].length;
 		}
-		int matrixHeight = arrayLengths[Utility.findMaximumPos(arrayLengths)];
+		int matrixHeight = arrayLengths[Util.findMaximumPos(arrayLengths)];
 		
 		System.out.println("Matrix size: " + matrixHeight + "x" + matrixWidth);
 		System.out.printf("%-"+ columnWidth +"s", "");

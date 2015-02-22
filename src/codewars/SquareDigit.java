@@ -1,20 +1,20 @@
 package codewars;
 
-import utility.Utility;
+import utility.Util;
 
 public class SquareDigit {
 
 	public int squareDigits(int n) {
 		int valueToReturn = 0;
 		
-		int sigFigs = Utility.findSigFigs(n);
+		int sigFigs = Util.findSigFigs(n);
 		int lastDigit = -1;
 		int previousZeros = 0;
 		for (int i = 0; i < sigFigs; i++) {
 			int digit = n % 10;
 			int digitSquared = (int) (Math.pow((double) digit, 2));
 			
-			int currentSigFigs = Utility.findSigFigs(valueToReturn);
+			int currentSigFigs = Util.findSigFigs(valueToReturn);
 			if (lastDigit == 0) {
 				previousZeros++;
 				currentSigFigs = currentSigFigs + previousZeros;

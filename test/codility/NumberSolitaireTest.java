@@ -9,7 +9,7 @@ import codility.NumberSolitaire;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import testutility.TestMethods;
-import utility.Utility;
+import utility.Util;
 
 /**
  *

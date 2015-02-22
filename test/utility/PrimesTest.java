@@ -38,7 +38,7 @@ public class PrimesTest {
 		};
 		int upTo = 17;
 		int[] primes = Primes.findPrimes(upTo);
-		Utility.printArray(primes);
+		Util.printArray(primes);
 		assertArrayEquals(expectedPrimes, primes);
 	}
 	
@@ -47,7 +47,7 @@ public class PrimesTest {
 		int testVal = 1;
 		int[] expected = {2, 5, 10, 20};
 		int[] returnedArray = Primes.findPrimeFactors(testVal);
-		Utility.printArray(returnedArray);
+		Util.printArray(returnedArray);
 //		assertArrayEquals(expected, returnedArray);
 	}
 	

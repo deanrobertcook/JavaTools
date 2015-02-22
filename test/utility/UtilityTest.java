@@ -14,13 +14,13 @@ public class UtilityTest extends TestMethods {
 	@Test
 	public void scribbleTest() {
 		String[] array = this.randomStrings(10, 10);
-		Utility.printArray(array);
+		Util.printArray(array);
 	}
 	
 	@Test
 	public void testPrintMatrix() {
 		int[][] matrix = this.randomIntegerArrays(6, 3, 3, -100, 100);
-		Utility.printMatrix(matrix);
+		Util.printMatrix(matrix);
 		System.out.println("Check [2][0]:" + matrix[2][0]);
 	}
 	
@@ -34,7 +34,7 @@ public class UtilityTest extends TestMethods {
 		};
 
 		for (int i = 0; i < testInputs.length; i++) {
-			assertEquals(expectedOutputs[i], Utility.findSigFigs(testInputs[i]));
+			assertEquals(expectedOutputs[i], Util.findSigFigs(testInputs[i]));
 		}
 	}
 
@@ -49,9 +49,9 @@ public class UtilityTest extends TestMethods {
 		int[][] arrays = this.randomIntegerArrays(numArrays, minLengths, maxLengths, minVals, maxVals);
 		for (int[] array : arrays) {
 			if (array.length > 0) {
-				int testMin = Utility.findMinimumPos(array);
+				int testMin = Util.findMinimumPos(array);
 				int valueAtMin = array[testMin];
-				int testMax = Utility.findMaximumPos(array);
+				int testMax = Util.findMaximumPos(array);
 				int valueAtMax = array[testMax];
 
 				Arrays.sort(array);
