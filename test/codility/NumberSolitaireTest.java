@@ -8,14 +8,14 @@ package codility;
 import codility.NumberSolitaire;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import utility.TestCase;
+import testutility.TestMethods;
 import utility.Utility;
 
 /**
  *
  * @author dean
  */
-public class NumberSolitaireTest extends TestCase {
+public class NumberSolitaireTest extends TestMethods {
 	
 	/**
 	 * Test of solution method, of class PebbleSquare.

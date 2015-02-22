@@ -7,14 +7,14 @@ package datastructures;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import utility.TestCase;
+import testutility.TestMethods;
 import utility.Utility;
 
 /**
  *
  * @author dean
  */
-public class HashTableTest extends TestCase {
+public class HashTableTest extends TestMethods {
 	
 	@Test
 	public void testSimpleInsertAndGet() {

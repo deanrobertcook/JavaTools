@@ -5,6 +5,7 @@
  */
 package utility;
 
+import testutility.TestMethods;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
  *
  * @author dean
  */
-public class MergeSortTest extends TestCase {
+public class MergeSortTest extends TestMethods {
 	
 	@Test
 	public void testSimple() {

@@ -1,5 +1,6 @@
 package utility;
 
+import testutility.TestMethods;
 import java.util.Arrays;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -8,7 +9,7 @@ import static org.junit.Assert.*;
  *
  * @author dean
  */
-public class UtilityTest extends TestCase {
+public class UtilityTest extends TestMethods {
 	@Test
 	public void testFindPlaceValue() {
 		System.out.println("findPlaceValue");
