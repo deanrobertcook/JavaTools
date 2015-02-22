@@ -9,30 +9,47 @@ import java.util.Random;
  */
 public class TestMethods {
 
-	private long startTime;
-	private long endTime;
+	private long[] startTimes;
+	private long[] endTimes;
 
 	protected final Random randomGenerator;
 
 	public TestMethods() {
 		this.randomGenerator = new Random();
+		this.startTimes = new long[10];
+		this.endTimes = new long[10];
 	}
 
-	public void startTimer() {
-		this.startTime = System.currentTimeMillis();
+	public void startNewTimer(int timer) {
+		if (timer > this.startTimes.length) {
+			this.increaseTimers();
+		}
+		this.startTimes[timer] = System.currentTimeMillis();
+	}
+	
+	private void increaseTimers() {
+		int oldLenth = this.startTimes.length;
+		long[] newStartTimes = new long[oldLenth * 2];
+		System.arraycopy(this.startTimes, 0, newStartTimes, 0, oldLenth);
+		
+		long[] newEndTimes = new long[oldLenth * 2];
+		System.arraycopy(this.endTimes, 0, newStartTimes, 0, oldLenth);
+		
+		this.startTimes = newStartTimes;
+		this.endTimes = newEndTimes;
 	}
 
-	public void stopTimer() {
-		this.endTime = System.currentTimeMillis();
+	public void stopTimer(int timer) {
+		this.endTimes[timer] = System.currentTimeMillis();
 	}
 
-	public void printTime() {
-		long time = this.endTime - this.startTime;
+	public void printTime(int timer) {
+		long time = this.endTimes[timer] - this.startTimes[timer];
 		System.out.println("Time taken: " + time + "ms");
 	}
 
-	public long getTime() {
-		return this.endTime - this.startTime;
+	public long getTime(int timer) {
+		return this.endTimes[timer] - this.startTimes[timer];
 	}
 
 	public boolean isArrayInNumericalOrder(int[] A) {
@@ -43,7 +60,7 @@ public class TestMethods {
 		}
 		return true;
 	}
-	
+
 	public int[][] randomIntegerArrays(int numArrays, int maxLength, int maxRange) {
 		int[][] arrays = new int[numArrays][];
 		for (int i = 0; i < arrays.length; i++) {
@@ -60,19 +77,18 @@ public class TestMethods {
 		int arrayLength = this.randomGenerator.nextInt(maxLength + 1);
 		if (minLength > 0) {
 			int lengthRange = maxLength - minLength + 1;
-			arrayLength =  arrayLength % lengthRange;
+			arrayLength = arrayLength % lengthRange;
 			arrayLength = arrayLength + minLength;
 		}
 
 		int[] array = new int[arrayLength];
 
-		
-		long intRange = (long)maxVal - (long)minVal;
+		long intRange = (long) maxVal - (long) minVal;
 		for (int i = 0; i < array.length; i++) {
 			long rand = this.randomGenerator.nextInt();
 			rand = rand % ((intRange + 2) / 2);
 			rand = rand + (intRange / 2) + minVal;
-			array[i] = (int)rand;
+			array[i] = (int) rand;
 		}
 		return array;
 	}

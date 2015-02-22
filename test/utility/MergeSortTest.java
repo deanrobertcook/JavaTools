@@ -19,10 +19,7 @@ public class MergeSortTest extends TestMethods {
 	public void testSimple() {
 		int[][] arrays = this.createScaledArrays();
 		for (int[] array : arrays) {
-			this.startTimer();
 			MergeSort.sort(array);
-			this.stopTimer();
-			System.out.println("Sorted array of length: " + array.length + " in: " + this.getTime() + "ms");
 			if (!this.isArrayInNumericalOrder(array)) {
 				fail("Array not properly sorted");
 			}

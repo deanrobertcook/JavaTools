@@ -109,16 +109,6 @@ public class Utility {
 		return placeValue;
 	}
 
-	public static int[] findIntValuesOfStringCharacters(String string) {
-		char[] indexAsArray = string.toCharArray();
-		int[] asciiArray = new int[indexAsArray.length];
-		for (int i = 0; i < indexAsArray.length; i++) {
-			int asciiVal = (int) indexAsArray[i];
-			asciiArray[i] = asciiVal;
-		}
-		return asciiArray;
-	}
-
 	/**
 	 * Wrapper function for Math.pow() for working only with integers. Saves
 	 * tedious casting.

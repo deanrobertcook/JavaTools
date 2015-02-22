@@ -27,19 +27,6 @@ public class UtilityTest extends TestMethods {
 	}
 
 	@Test
-	public void testFindIntValuesOfStringCharacters() {
-		String testString = "abcdABCD1234!@#$%^&*()";
-		int[] expectedVals = {
-			97, 98, 99, 100,
-			65, 66, 67, 68,
-			49, 50, 51, 52,
-			33, 64, 35, 36, 37, 94, 38, 42, 40, 41
-		};
-		int[] intVals = Utility.findIntValuesOfStringCharacters(testString);
-		assertArrayEquals(expectedVals, intVals);
-	}
-
-	@Test
 	public void testFindMinimumAndMax() {
 		int[][] arrays = this.randomIntegerArrays(1000, 100, 10);
 		for (int[] array : arrays) {
