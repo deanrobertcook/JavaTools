@@ -40,7 +40,7 @@ public class UtilityTest extends TestMethods {
 	
 	@Test
 	public void testFindMinimumAndMax() {
-		int[][] arrays = this.createRandomArrays(1000, 100, 10);		
+		int[][] arrays = this.randomIntegerArrays(1000, 100, 10);		
 		for (int[] array : arrays) {
 			int testMin = Utility.findMinimum(array);
 			int valueAtMin = array[testMin];

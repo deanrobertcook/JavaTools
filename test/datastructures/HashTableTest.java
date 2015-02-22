@@ -51,8 +51,8 @@ public class HashTableTest extends TestMethods {
 	
 	@Test
 	public void testMediumInsertsAndGets() {
-		String[] indices = this.generateRandomStrings(50, 10);
-		String[] values = this.generateRandomStrings(50, 50);
+		String[] indices = this.randomStrings(50, 10);
+		String[] values = this.randomStrings(50, 50);
 		
 		HashTable hashTable = new HashTable();
 		for (int i = 0; i < indices.length; i++) {

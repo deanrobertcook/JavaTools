@@ -44,7 +44,7 @@ public class NumberSolitaireTest extends TestMethods {
 	
 	@Test
 	public void testLarge() {
-		int[] A = this.createRandomArray(2, 100000, -10000, 10000);
+		int[] A = this.randomIntegers(2, 100000, -10000, 10000);
 		new NumberSolitaire().solution(A);
 	}
 	
