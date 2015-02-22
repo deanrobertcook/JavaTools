@@ -21,7 +21,7 @@ public class TestMethods {
 	}
 
 	public void startNewTimer(int timer) {
-		if (timer > this.startTimes.length) {
+		if (timer == this.startTimes.length) {
 			this.increaseTimers();
 		}
 		this.startTimes[timer] = System.currentTimeMillis();
@@ -33,7 +33,7 @@ public class TestMethods {
 		System.arraycopy(this.startTimes, 0, newStartTimes, 0, oldLenth);
 		
 		long[] newEndTimes = new long[oldLenth * 2];
-		System.arraycopy(this.endTimes, 0, newStartTimes, 0, oldLenth);
+		System.arraycopy(this.endTimes, 0, newEndTimes, 0, oldLenth);
 		
 		this.startTimes = newStartTimes;
 		this.endTimes = newEndTimes;
@@ -46,6 +46,16 @@ public class TestMethods {
 	public void printTime(int timer) {
 		long time = this.endTimes[timer] - this.startTimes[timer];
 		System.out.println("Time taken: " + time + "ms");
+	}
+	
+	public long[] getTimes(int firstTimer, int lastTimer) {
+		int numTimers = lastTimer - firstTimer + 1;
+		long[] times = new long[numTimers];
+		for (int i = 0; i < numTimers; i++) {
+			long time = this.getTime(i + firstTimer);
+			times[i] = time;
+		}
+		return times;
 	}
 
 	public long getTime(int timer) {

@@ -17,13 +17,19 @@ public class MergeSortTest extends TestMethods {
 	
 	@Test
 	public void testSimple() {
-		int[][] arrays = this.randomIntegerArrays(50, 0, 100, -1000, 1000);
-		for (int[] array : arrays) {
-			MergeSort.sort(array);
-			if (!this.isArrayInNumericalOrder(array)) {
+		int[][] arrays = this.randomIntegerArrays(12, 0, 100000, -1000, 1000);
+		for (int i = 0; i < arrays.length; i++) {
+			this.startNewTimer(i);
+			MergeSort.sort(arrays[i]);
+			this.stopTimer(i);
+			this.printTime(i);
+			if (!this.isArrayInNumericalOrder(arrays[i])) {
 				fail("Array not properly sorted");
 			}
 		}
+		
+		long[] times = this.getTimes(0, arrays.length - 1);
+		Utility.printArray(times);
 	}
 	
 }
