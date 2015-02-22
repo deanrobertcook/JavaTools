@@ -1,24 +1,24 @@
 package datastructures;
 
-public class Node {
+public class Node<E> {
 	
 	public Node() {
 		
 	}
 	
-	public Object get() {
+	public E get() {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 	
-	public void update(Object value) {
+	public void update(E value) {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 	
-	public Node next () {
+	public Node<E> next () {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 	
-	public Node previous() {
+	public Node<E> previous() {
 		throw new UnsupportedOperationException("Not supported yet.");
 	}
 }

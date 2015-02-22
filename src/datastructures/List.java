@@ -1,19 +1,19 @@
 package datastructures;
 
-public interface List {
-	public void insert(Object value);
+public interface List<E> {
+	public void insert(E value);
 	
-	public void insert(Object value, int index);
+	public void insert(E value, int index);
 	
-	public void insertList(List list, int index);
+	public void insertList(List<E> list, int index);
 	
-	public int search(Object value);
+	public int search(E value);
 	
 	public void delete(int index);
 	
-	public Object get(int index);
+	public E get(int index);
 	
 	public void sort();
 	
-	public Object[] toArray();
+	public E[] toArray();
 }
