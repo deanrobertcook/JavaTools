@@ -17,17 +17,6 @@ import utility.Utility;
  */
 public class NumberSolitaireTest extends TestMethods {
 	
-	/**
-	 * Test of solution method, of class PebbleSquare.
-	 */
-//	@Test
-	public void testSimple() {
-		Utility.printArray(this.createScaledArrays(3, 18, 10)[2]);
-		int[] A = {1, -2, 0, 9, -1, -2};
-		int expected = 8;
-		assertEquals(expected, new NumberSolitaire().solution(A));
-	}
-	
 //	@Test
 	public void testValidated() {
 		int[] A = {1, -2, 0, 9, -1, -2};

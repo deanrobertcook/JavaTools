@@ -13,7 +13,6 @@ public class UtilityTest extends TestMethods {
 
 	@Test
 	public void testFindPlaceValue() {
-		System.out.println("findPlaceValue");
 		int[] testInputs = {
 			10000, 8964, 5, 717322, 0
 		};
@@ -28,17 +27,24 @@ public class UtilityTest extends TestMethods {
 
 	@Test
 	public void testFindMinimumAndMax() {
-		int[][] arrays = this.randomIntegerArrays(1000, 100, 10);
+		int numArrays = 1000;
+		int minLengths = 0;
+		int maxLengths = 100;
+		int minVals = 100;
+		int maxVals = 100;
+		
+		int[][] arrays = this.randomIntegerArrays(numArrays, minLengths, maxLengths, minVals, maxVals);
 		for (int[] array : arrays) {
-			int testMin = Utility.findMinimum(array);
-			int valueAtMin = array[testMin];
-			int testMax = Utility.findMaximum(array);
-			int valueAtMax = array[testMax];
+			if (array.length > 0) {
+				int testMin = Utility.findMinimum(array);
+				int valueAtMin = array[testMin];
+				int testMax = Utility.findMaximum(array);
+				int valueAtMax = array[testMax];
 
-			Arrays.sort(array);
-			assertEquals(array[0], valueAtMin);
-			assertEquals(array[array.length - 1], valueAtMax);
+				Arrays.sort(array);
+				assertEquals(array[0], valueAtMin);
+				assertEquals(array[array.length - 1], valueAtMax);
+			}			
 		}
-
 	}
 }

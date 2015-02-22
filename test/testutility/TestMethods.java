@@ -61,16 +61,13 @@ public class TestMethods {
 		return true;
 	}
 
-	public int[][] randomIntegerArrays(int numArrays, int maxLength, int maxRange) {
+	public int[][] randomIntegerArrays(int numArrays, int minLength,
+			int maxLength, int minVal, int maxVal) {
 		int[][] arrays = new int[numArrays][];
 		for (int i = 0; i < arrays.length; i++) {
-			arrays[i] = this.randomIntegers(maxLength, maxRange);
+			arrays[i] = this.randomIntegers(minLength, maxLength,  minVal, maxVal);
 		}
 		return arrays;
-	}
-
-	public int[] randomIntegers(int maxLength, int maxRange) {
-		return this.randomIntegers(0, maxLength, -maxRange, maxRange);
 	}
 
 	public int[] randomIntegers(int minLength, int maxLength, int minVal, int maxVal) {
@@ -114,30 +111,5 @@ public class TestMethods {
 		return randomString;
 	}
 
-	public int[][] createScaledArrays() {
-		return this.createScaledArrays(7, 10, -1);
-	}
-
-	//Creates numArrays each increasing by a factor of sizeMultiplier with random
-	//values between -rangeOfRandomValues and rangeOfRandomValues
-	public int[][] createScaledArrays(int numArrays, int sizeMultiplier, int rangeOfRandomValues) {
-		int[][] arrays = new int[numArrays][];
-
-		for (int i = 0; i < numArrays; i++) {
-			if (i == 0) {
-				arrays[i] = new int[0];
-			} else {
-				int arraySize = 1 * (int) Math.pow(sizeMultiplier, (double) (i - 1));
-				arrays[i] = new int[arraySize];
-				for (int j = 0; j < arraySize; j++) {
-					if (rangeOfRandomValues == -1) {
-						arrays[i][j] = this.randomGenerator.nextInt();
-					} else {
-						arrays[i][j] = this.randomGenerator.nextInt() % rangeOfRandomValues;
-					}
-				}
-			}
-		}
-		return arrays;
-	}
+	
 }

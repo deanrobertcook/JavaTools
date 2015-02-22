@@ -17,7 +17,7 @@ public class MergeSortTest extends TestMethods {
 	
 	@Test
 	public void testSimple() {
-		int[][] arrays = this.createScaledArrays();
+		int[][] arrays = this.randomIntegerArrays(50, 0, 100, -1000, 1000);
 		for (int[] array : arrays) {
 			MergeSort.sort(array);
 			if (!this.isArrayInNumericalOrder(array)) {
