@@ -34,7 +34,7 @@ public class HashTable {
 		for (int i = 0; i < indexChars.length; i++) {
 			hash += (int)indexChars[i];
 		}
-		hash = Utility.pow(hash, 2);
+		hash = (int) Math.pow((double)hash, (double)2);
 		hash = hash % this.backingArray.length;
 		return hash;
 	}

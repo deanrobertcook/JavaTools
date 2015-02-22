@@ -70,6 +70,17 @@ public class TestMethods {
 		}
 		return true;
 	}
+	
+	public int[][] increasingArrays() {
+		int numArrays = 6; //of sizes 1, 10, 100, 1000, 10000, 100000
+		int[][] arrays = new int[numArrays][];
+		for (int i = 0; i < numArrays; i++) {
+			int arraySize = 1 * (int) Math.pow((double) 10, (double) (i));
+			int[] array = this.randomIntegers(arraySize, arraySize, Integer.MIN_VALUE, Integer.MAX_VALUE);
+			arrays[i] = array;
+		}
+		return arrays;
+	}
 
 	public int[][] randomIntegerArrays(int numArrays, int minLength,
 			int maxLength, int minVal, int maxVal) {
