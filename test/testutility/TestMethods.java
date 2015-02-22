@@ -58,8 +58,9 @@ public class TestMethods {
 
 	public int[] randomIntegers(int minLength, int maxLength, int minVal, int maxVal) {
 		int arrayLength = this.randomGenerator.nextInt(maxLength + 1);
+		
+		arrayLength = arrayLength % minLength;
 		arrayLength = arrayLength + minLength;
-		arrayLength = arrayLength % maxLength + 1;
 
 		int[] array = new int[arrayLength];
 
