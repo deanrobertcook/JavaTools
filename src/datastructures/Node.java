@@ -6,19 +6,19 @@ public class Node {
 		
 	}
 	
-	public String get() {
-		return "";
+	public Object get() {
+		throw new UnsupportedOperationException("Not supported yet.");
 	}
 	
-	public void update(String value) {
-		
+	public void update(Object value) {
+		throw new UnsupportedOperationException("Not supported yet.");
 	}
 	
-	public void next (Node nextNode) {
-		
+	public Node next () {
+		throw new UnsupportedOperationException("Not supported yet.");
 	}
 	
-	public void previous(Node previousNode) {
-		
+	public Node previous() {
+		throw new UnsupportedOperationException("Not supported yet.");
 	}
 }
