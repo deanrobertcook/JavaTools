@@ -11,15 +11,21 @@ package utility;
  */
 public class Utility {
 	public static void printArray(int[] A) {
+		System.out.println("Array Size: " + A.length);
+		System.out.printf("%-10s%s\n", "Index", "Value");
 		for(int i = 0; i < A.length; i++) {
-			System.out.println(A[i]);
+			System.out.printf("%-10s %d;\n", "A[" + i + "] = ", A[i]);
 		}
+		System.out.println("------------------------------------");
 	}
 	
 	public static void printArray(String[] A) {
+		System.out.println("Array Size: " + A.length);
+		System.out.printf("%-10s%s\n", "Index", "Value");
 		for(int i = 0; i < A.length; i++) {
-			System.out.println(A[i]);
+			System.out.printf("%-10s %s;\n", "A[" + i + "] = ", A[i]);
 		}
+		System.out.println("------------------------------------");
 	}
 	
 	public static int findMinimum(int[] A) {
