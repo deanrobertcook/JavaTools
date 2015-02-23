@@ -9,12 +9,11 @@ import static org.junit.Assert.*;
  *
  * @author dean
  */
-public class UtilityTest extends TestMethods {
+public class UtilTest extends TestMethods {
 
 	@Test
 	public void scribbleTest() {
-		String[] array = this.randomStrings(10, 10);
-		Util.printArray(array);
+		
 	}
 	
 	@Test
@@ -58,6 +57,17 @@ public class UtilityTest extends TestMethods {
 				assertEquals(array[0], valueAtMin);
 				assertEquals(array[array.length - 1], valueAtMax);
 			}			
+		}
+	}
+	
+	@Test
+	public void testSumOfAll() {
+		int currentSum = 0;
+		for (int i = 0; i < 100; i++) {
+			int returned = Util.sumOfAll(i);
+			currentSum += i;
+			int expected = currentSum;
+			assertEquals(expected, returned);
 		}
 	}
 }

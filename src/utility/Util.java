@@ -147,5 +147,10 @@ public class Util {
 		placeValue++;
 		return placeValue;
 	}
+	
+	public static int sumOfAll(int n) {
+		//what a nice function!
+		return	n * (n + 1) / 2;
+	}
 
 }
