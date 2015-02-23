@@ -119,6 +119,17 @@ public class TestMethods {
 		}
 		return strings;
 	}
+	
+	public String randomStringContaining(int length, String chars) {
+		char[] charsArray = chars.toCharArray();
+		String returnString = "";
+		for (int i = 0; i < length; i++) {
+			int randomIndex = this.randomGenerator.nextInt(charsArray.length);
+			char nextChar = charsArray[randomIndex];
+			returnString += nextChar;
+		}
+		return returnString;
+	}
 
 	public String randomString(int length) {
 		char[] stringAsChars = new char[length];
