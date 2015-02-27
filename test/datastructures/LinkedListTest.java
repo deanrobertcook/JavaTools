@@ -69,6 +69,29 @@ public class LinkedListTest extends TestMethods {
 	}
 	
 	@Test
+	public void testDelete_repeatedValues() {
+		String[] strings = {
+			this.randomString(10),
+			"repetative",
+			this.randomString(10),
+			"repetative",
+			this.randomString(10),
+			"repetative",
+			this.randomString(10),
+		};
+		
+		for (String string : strings) {
+			list.insert(string);
+		}
+		
+		int timesDeleted = 0;
+		while (list.delete("repetative")) {			
+			timesDeleted++;
+		}
+		assertEquals(3, timesDeleted);
+	}
+	
+	@Test
 	public void testDelete_nonExistentValue() {
 		boolean deleted = list.delete("Non existent value");
 		assertFalse("Deletion found a non existent value", deleted);

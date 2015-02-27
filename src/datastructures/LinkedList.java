@@ -3,6 +3,7 @@ package datastructures;
 /**
  *
  * @author dean
+ * @param <E>
  */
 public class LinkedList<E> implements List<E> {
 
@@ -10,6 +11,11 @@ public class LinkedList<E> implements List<E> {
 	private Node<E> last;
 	private int size;
 
+	public LinkedList(E[] array) {
+		this();
+		this.fromArray(array);
+	}
+	
 	public LinkedList() {
 		this.first = new Node<>();
 		this.last = this.first;
@@ -117,5 +123,10 @@ public class LinkedList<E> implements List<E> {
 			return true;
 		}
 		return false;
+	}
+	
+	@Override
+	public void fromArray(E[] array) {
+		throw new UnsupportedOperationException("Not supported yet.");
 	}
 }

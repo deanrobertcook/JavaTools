@@ -20,4 +20,6 @@ public interface List<E> {
 	public void sort();
 	
 	public E[] toArray();
+	
+	public void fromArray(E[] array);
 }
