@@ -7,12 +7,13 @@ package datastructures;
 public class LinkedList<E> implements List<E> {
 
 	private Node<E> first;
-	private Node<E> current;
 	private Node<E> last;
+	private int size;
 
 	public LinkedList() {
 		this.first = new Node<>();
 		this.last = this.first;
+		this.size = 0;
 	}
 
 	@Override
@@ -23,11 +24,17 @@ public class LinkedList<E> implements List<E> {
 			this.last.insertAfter(element);
 			this.last = this.last.getNext();
 		}
+		this.size++;
 	}
 
 	@Override
 	public void insert(E element, int index) {
 		throw new UnsupportedOperationException("Not supported yet.");
+	}
+	
+	@Override
+	public int size() {
+		return this.size;
 	}
 
 	@Override
@@ -36,8 +43,43 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public void delete(int index) {
-		throw new UnsupportedOperationException("Not supported yet.");
+	public boolean delete(E value) {
+		if (this.size > 0) {
+			
+			Node<E> current = this.first;
+			Node<E> previousNode = null;
+			while (current.value() != value && current.hasNext()) {				
+				previousNode = current;
+				current = current.getNext();
+			}
+			if (current.value() == value) { //found the element
+				if (previousNode != null && current.hasNext()) {
+					//neither first nor last element
+					Node<E> nextNode = current.getNext();
+					previousNode.replaceTail(nextNode);
+					
+				} else if (previousNode != null && !current.hasNext()){
+					//last element
+					previousNode.replaceTail(null);
+					
+				} else {
+					//first element
+					if (this.size == 1) {
+						//first element no tail
+						this.first.update(null);
+					} else {
+						//tail becomes first element
+						this.first = current.getNext();
+					}
+				}
+				//should have been removed!!
+				this.size--;
+				return true;
+			} else { //coudln't find value
+				return false;
+			}
+		}
+		return false;
 	}
 
 	@Override
@@ -52,14 +94,14 @@ public class LinkedList<E> implements List<E> {
 
 	@Override
 	public E get(int index) {
-		this.current = this.first;
+		Node<E> current = this.first;
 		int count = 0;
-		while (this.current.hasNext() && count < index) {
-			this.current = this.current.getNext();
+		while (current.hasNext() && count < index) {
+			current = current.getNext();
 			count++;
 		}
 		if (count == index) {
-			return this.current.get();
+			return current.value();
 		}
 		return null;
 	}
@@ -67,5 +109,13 @@ public class LinkedList<E> implements List<E> {
 	@Override
 	public E[] toArray() {
 		throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public boolean isEmpty() {
+		if (size == 0) {
+			return true;
+		}
+		return false;
 	}
 }

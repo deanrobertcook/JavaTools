@@ -7,9 +7,13 @@ public interface List<E> {
 	
 	public void insertList(List<E> list, int index);
 	
+	public boolean isEmpty();
+	
+	public int size();
+	
 	public int search(E value);
 	
-	public void delete(int index);
+	public boolean delete(E value);
 	
 	public E get(int index);
 	

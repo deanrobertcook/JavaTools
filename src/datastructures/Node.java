@@ -3,26 +3,26 @@ package datastructures;
 public class Node<E> {
 	
 	private Node<E> tail;
-	private E element;
+	private E value;
 	
 	public Node() {
 		
 	}
 	
-	public Node(E element) {
-		this.element = element;
+	public Node(E value) {
+		this.value = value;
 	}
 	
 	public boolean isEmpty() {
-		return this.element == null;
+		return this.value == null;
 	}
 	
-	public E get() {
-		return this.element;
+	public E value() {
+		return this.value;
 	}
 	
 	public void update(E element) {
-		this.element = element;
+		this.value = element;
 	}
 	
 	public boolean hasNext() {
@@ -36,10 +36,14 @@ public class Node<E> {
 		return null;
 	}
 	
-	public void insertAfter(E element) {
+	public void insertAfter(E value) {
 		if (!this.hasNext()) {
-			this.tail = new Node<>(element);
+			this.tail = new Node<>(value);
 		}
+	}
+	
+	public void replaceTail(Node<E> newTail) {
+		this.tail = newTail;
 	}
 	
 	public Node<E> previous() {
