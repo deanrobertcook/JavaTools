@@ -140,4 +140,32 @@ public class LinkedListTest extends TestMethods {
 			assertEquals(expectedString, returnedString);
 		}
 	}
+	
+	@Test
+	public void testSearch_nonExistentValue() {
+		int index = this.list.search("Non existent string");
+		assertEquals(-1, index);
+	}
+	
+	@Test
+	public void testSearch_singleValue() {
+		String string = this.randomString(100);
+		list.insert(string);
+		int index = list.search(string);
+		assertEquals(0, index);
+	}
+	
+	@Test
+	public void testSearch_multipleValues() {
+		String[] strings = this.randomStrings(10000, 5000);
+		
+		for (String string : strings) {
+			list.insert(string);
+		}
+		
+		//pick a random string to search for
+		int expectedIndex = this.randomGenerator.nextInt(strings.length);
+		int index = list.search(strings[expectedIndex]);
+		assertEquals(expectedIndex, index);
+	}
 }

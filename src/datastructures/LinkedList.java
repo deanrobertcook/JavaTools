@@ -44,8 +44,19 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public int search(E element) {
-		throw new UnsupportedOperationException("Not supported yet.");
+	public int search(E value) {
+		if (this.size > 0) {
+			Node<E> current = this.first;
+			int index = 0;
+			while (current.value() != value && current.hasNext()) {				
+				current = current.getNext();
+				index++;
+			}
+			if (current.value() == value) {
+				return index;
+			}
+		}
+		return -1;
 	}
 
 	@Override
