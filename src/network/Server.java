@@ -29,13 +29,11 @@ public class Server {
 			socket = new ServerSocket(this.portNumber);
 		} catch (IOException e) {
 			System.err.println("Could not listen on port " + portNumber);
+			System.out.println(e.getMessage());
 			System.exit(-1);
 		}
 		this.serverSocket = socket;
 		
-		for (int i = 0; i < this.threadIds.length; i++) {
-			threadIds[i] = false;
-		}
 	}
 
 	public void listen() {

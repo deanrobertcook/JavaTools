@@ -11,6 +11,38 @@ import java.net.UnknownHostException;
  * @author Dean Cook<deanrobertcook@gmail.com>
  */
 public class Client {
+	
+	private final String hostName;
+	private final int portNumber;
+	
+	public Client(String hostname, int portNumber) {
+		this.hostName = hostname;
+		this.portNumber = portNumber;
+	}
+	
+	public void sendMessage(String message) {
+		try (
+			Socket echoSocket = new Socket(hostName, portNumber);
+            PrintWriter out =
+                new PrintWriter(echoSocket.getOutputStream(), true);
+            BufferedReader in =
+                new BufferedReader(
+                    new InputStreamReader(echoSocket.getInputStream()));
+        ) {
+           out.println(message);
+           System.out.println("echo: " + in.readLine());
+        } catch (UnknownHostException e) {
+            System.err.println("Don't know about host " + hostName);
+            System.err.println(e.getMessage());
+            System.exit(1);
+        } catch (IOException e) {
+            System.err.println("Couldn't get I/O for the connection to " +
+                hostName);
+			System.out.println(e.getMessage());
+            System.exit(1);
+        }
+	}
+	
 	public static void main(String[] args) throws IOException {
          
         if (args.length != 2) {
@@ -22,29 +54,7 @@ public class Client {
         String hostName = args[0];
         int portNumber = Integer.parseInt(args[1]);
  
-        try (
-            Socket echoSocket = new Socket(hostName, portNumber);
-            PrintWriter out =
-                new PrintWriter(echoSocket.getOutputStream(), true);
-            BufferedReader in =
-                new BufferedReader(
-                    new InputStreamReader(echoSocket.getInputStream()));
-            BufferedReader stdIn =
-                new BufferedReader(
-                    new InputStreamReader(System.in))
-        ) {
-            String userInput;
-            while ((userInput = stdIn.readLine()) != null) {
-                out.println(userInput);
-                System.out.println("echo: " + in.readLine());
-            }
-        } catch (UnknownHostException e) {
-            System.err.println("Don't know about host " + hostName);
-            System.exit(1);
-        } catch (IOException e) {
-            System.err.println("Couldn't get I/O for the connection to " +
-                hostName);
-            System.exit(1);
-        } 
+		new Client(hostName, portNumber).sendMessage("hello");
+        
     }
 }
