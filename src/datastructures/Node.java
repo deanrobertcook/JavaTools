@@ -5,9 +5,7 @@ public class Node<E> {
 	private Node<E> tail;
 	private E value;
 	
-	public Node() {
-		
-	}
+	public Node() {}
 	
 	public Node(E value) {
 		this.value = value;

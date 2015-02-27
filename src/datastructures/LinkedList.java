@@ -12,9 +12,21 @@ public class LinkedList<E> implements List<E> {
 	private int size;
 
 	public LinkedList() {
-		this.first = new Node<>();
+		this.first = this.makeNode();
 		this.last = this.first;
 		this.size = 0;
+	}
+	
+	/**
+	 * Node Factory methods
+	 * @return 
+	 */
+	protected Node<E> makeNode() {
+		return new Node<E>();
+	}
+	
+	protected Node<E> makeNode(E value) {
+		return new Node<E>(value);
 	}
 
 	@Override
@@ -30,7 +42,7 @@ public class LinkedList<E> implements List<E> {
 
 	@Override
 	public void insert(E value, int index) {
-		Node<E> newNode = new Node<>(value);
+		Node<E> newNode = this.makeNode(value);
 		if (index == 0) {
 			newNode.replaceTail(this.first);
 			this.first = newNode;
