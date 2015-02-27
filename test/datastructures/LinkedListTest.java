@@ -197,4 +197,14 @@ public class LinkedListTest extends TestMethods {
 		String stringAtFront = list.get(0);
 		assertEquals(prependString, stringAtFront);
 	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void getNegativeIndex() {
+		list.get(-1);
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void getNonExistentIndex() {
+		list.get(1);
+	}
 }

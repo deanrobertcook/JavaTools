@@ -30,19 +30,15 @@ public class LinkedList<E> implements List<E> {
 
 	@Override
 	public void insert(E value, int index) {
-		if (index >= this.size - 1) {
-			this.insert(value);
+		Node<E> newNode = new Node<>(value);
+		if (index == 0) {
+			newNode.replaceTail(this.first);
+			this.first = newNode;
 		} else {
-			Node<E> newNode = new Node<>(value);
-			if (index == 0) {
-				newNode.replaceTail(this.first);
-				this.first = newNode;
-			} else {
-				Node<E> previousNode = this.getNode(index - 1);
-				Node<E> nextNode = previousNode.getNext();
-				newNode.replaceTail(nextNode);
-				previousNode.replaceTail(newNode);
-			}
+			Node<E> previousNode = this.getNode(index - 1);
+			Node<E> nextNode = previousNode.getNext();
+			newNode.replaceTail(nextNode);
+			previousNode.replaceTail(newNode);
 		}
 	}
 
@@ -120,15 +116,14 @@ public class LinkedList<E> implements List<E> {
 	@Override
 	public E get(int index) {
 		Node<E> node = this.getNode(index);
-		if (node != null) {
-			return node.value();
-		}
-		return null;
+		return node.value();
 	}
 
 	private Node<E> getNode(int index) {
 		if (index < 0) {
-			throw new ArrayIndexOutOfBoundsException("Index must be greater than 0");
+			throw new IndexOutOfBoundsException("Index must be greater than 0");
+		} else if (index > this.size - 1) {
+			throw new IndexOutOfBoundsException("Index must be less than the length of the List");
 		} else {
 			Node<E> current = this.first;
 			int currIndex = 0;
@@ -136,10 +131,7 @@ public class LinkedList<E> implements List<E> {
 				current = current.getNext();
 				currIndex++;
 			}
-			if (currIndex == index) {
-				return current;
-			}
-			return null;
+			return current;
 		}
 	}
 
