@@ -168,4 +168,33 @@ public class LinkedListTest extends TestMethods {
 		int index = list.search(strings[expectedIndex]);
 		assertEquals(expectedIndex, index);
 	}
+	
+	@Test
+	public void testInsert_randomIndexes() {
+		String[] initialStrings = this.randomStrings(10000, 10);
+		for (String string : initialStrings) {
+			list.insert(string);
+		}
+		
+		String[] extras = this.randomStrings(100, 10);
+		for (String expected : extras) {
+			int index = this.randomGenerator.nextInt(initialStrings.length);
+			list.insert(expected, index);
+			String stringAtIndex = list.get(index);
+			assertEquals(expected, stringAtIndex);
+		} 
+	}
+	
+	@Test
+	public void testInsert_prepend() {
+		String[] initialStrings = this.randomStrings(10000, 10);
+		for (String string : initialStrings) {
+			list.insert(string);
+		}
+		
+		String prependString = "String to add";
+		list.insert(prependString, 0);
+		String stringAtFront = list.get(0);
+		assertEquals(prependString, stringAtFront);
+	}
 }

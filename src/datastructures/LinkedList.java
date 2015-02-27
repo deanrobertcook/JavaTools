@@ -11,11 +11,6 @@ public class LinkedList<E> implements List<E> {
 	private Node<E> last;
 	private int size;
 
-	public LinkedList(E[] array) {
-		this();
-		this.fromArray(array);
-	}
-	
 	public LinkedList() {
 		this.first = new Node<>();
 		this.last = this.first;
@@ -34,10 +29,23 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public void insert(E element, int index) {
-		throw new UnsupportedOperationException("Not supported yet.");
+	public void insert(E value, int index) {
+		if (index >= this.size - 1) {
+			this.insert(value);
+		} else {
+			Node<E> newNode = new Node<>(value);
+			if (index == 0) {
+				newNode.replaceTail(this.first);
+				this.first = newNode;
+			} else {
+				Node<E> previousNode = this.getNode(index - 1);
+				Node<E> nextNode = previousNode.getNext();
+				newNode.replaceTail(nextNode);
+				previousNode.replaceTail(newNode);
+			}
+		}
 	}
-	
+
 	@Override
 	public int size() {
 		return this.size;
@@ -48,7 +56,7 @@ public class LinkedList<E> implements List<E> {
 		if (this.size > 0) {
 			Node<E> current = this.first;
 			int index = 0;
-			while (current.value() != value && current.hasNext()) {				
+			while (current.value() != value && current.hasNext()) {
 				current = current.getNext();
 				index++;
 			}
@@ -62,10 +70,10 @@ public class LinkedList<E> implements List<E> {
 	@Override
 	public boolean delete(E value) {
 		if (this.size > 0) {
-			
+
 			Node<E> current = this.first;
 			Node<E> previousNode = null;
-			while (current.value() != value && current.hasNext()) {				
+			while (current.value() != value && current.hasNext()) {
 				previousNode = current;
 				current = current.getNext();
 			}
@@ -74,11 +82,11 @@ public class LinkedList<E> implements List<E> {
 					//neither first nor last element
 					Node<E> nextNode = current.getNext();
 					previousNode.replaceTail(nextNode);
-					
-				} else if (previousNode != null && !current.hasNext()){
+
+				} else if (previousNode != null && !current.hasNext()) {
 					//last element
 					previousNode.replaceTail(null);
-					
+
 				} else {
 					//first element
 					if (this.size == 1) {
@@ -111,16 +119,28 @@ public class LinkedList<E> implements List<E> {
 
 	@Override
 	public E get(int index) {
-		Node<E> current = this.first;
-		int count = 0;
-		while (current.hasNext() && count < index) {
-			current = current.getNext();
-			count++;
-		}
-		if (count == index) {
-			return current.value();
+		Node<E> node = this.getNode(index);
+		if (node != null) {
+			return node.value();
 		}
 		return null;
+	}
+
+	private Node<E> getNode(int index) {
+		if (index < 0) {
+			throw new ArrayIndexOutOfBoundsException("Index must be greater than 0");
+		} else {
+			Node<E> current = this.first;
+			int currIndex = 0;
+			while (current.hasNext() && currIndex < index) {
+				current = current.getNext();
+				currIndex++;
+			}
+			if (currIndex == index) {
+				return current;
+			}
+			return null;
+		}
 	}
 
 	@Override
@@ -135,7 +155,7 @@ public class LinkedList<E> implements List<E> {
 		}
 		return false;
 	}
-	
+
 	@Override
 	public void fromArray(E[] array) {
 		throw new UnsupportedOperationException("Not supported yet.");
