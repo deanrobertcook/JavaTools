@@ -13,11 +13,17 @@ public class Server {
 	private int portNumber;
 	private final ServerSocket serverSocket;
 	private boolean listening = true;
-	private final int maxThreads = 2;
-	private boolean[] threadIds = new boolean[this.maxThreads];
+	private final int maxThreads;
+	private boolean[] threadIds;
 
 	public Server(int portNumber) {
+		this(portNumber, 1);
+	}
+	
+	public Server(int portNumber, int maxThreads) {
 		this.portNumber = portNumber;
+		this.maxThreads = maxThreads;
+		this.threadIds = new boolean[this.maxThreads];
 		ServerSocket socket = null;
 		try {
 			socket = new ServerSocket(this.portNumber);
