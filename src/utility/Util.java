@@ -5,25 +5,14 @@ package utility;
  * @author dean
  */
 public class Util {
-
-	public static <E> void printArray(E[] A) {
-		int columnLength = 7;
-		System.out.println("Array Size: " + A.length);
-		System.out.printf("%-" + (columnLength + 2) + "s%s\n", "Index", "Value");
-		for (int i = 0; i < A.length; i++) {
-			System.out.printf("%-" + columnLength + "s%s;\n", "A[" + i + "]", "= " + A[i]);
-		}
-		System.out.println("------------------------------------");
-	}
 	
 	public static void printArray(int[] A) {
-		Integer[] B = toObject(A);
-		printArray(B);
+		printArray(A, null);
 	}
 	
-	public static void printArray(long[] A) {
-		Long[] B = toObject(A);
-		printArray(B);
+	public static void printArray(int[] A, String header) {
+		Integer[] B = toObject(A);
+		printArray(B, header);
 	}
 	
 	public static Integer[] toObject(int[] A) {
@@ -34,6 +23,15 @@ public class Util {
 		return B;
 	}
 	
+	public static void printArray(long[] A) {
+		printArray(A, null);
+	}
+	
+	public static void printArray(long[] A, String header) {
+		Long[] B = toObject(A);
+		printArray(B, header);
+	}
+	
 	public static Long[] toObject(long[] A) {
 		Long[] B = new Long[A.length];
 		for (int i = 0; i < A.length; i++) {
@@ -41,7 +39,41 @@ public class Util {
 		}
 		return B;
 	}
-
+	
+	public static void printArray(boolean[] A) {
+		printArray(A, null);
+	}
+	
+	public static void printArray(boolean[] A, String header) {
+		Boolean[] B = toObject(A);
+		printArray(B, header);
+	}
+	
+	public static Boolean[] toObject(boolean[] A) {
+		Boolean[] B = new Boolean[A.length];
+		for (int i = 0; i < A.length; i++) {
+			B[i] = A[i];
+		}
+		return B;
+	}
+	
+	public static <E> void printArray(E[] A) {
+		printArray(A, null);
+	}
+	
+	public static <E> void printArray(E[] A, String header) {
+		int columnLength = 7;
+		if (header != null) {
+			System.out.println(header);
+		}
+		System.out.println("Array Size: " + A.length);
+		System.out.printf("%-" + (columnLength + 2) + "s%s\n", "Index", "Value");
+		for (int i = 0; i < A.length; i++) {
+			System.out.printf("%-" + columnLength + "s%s;\n", "A[" + i + "]", "= " + A[i]);
+		}
+		System.out.println("------------------------------------");
+	}
+	
 	public static void printMatrix(int[][] matrix) {
 		int columnWidth = 8;
 		int matrixWidth = matrix.length;
