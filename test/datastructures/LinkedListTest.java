@@ -140,14 +140,4 @@ public class LinkedListTest extends TestMethods {
 			assertEquals(expectedString, returnedString);
 		}
 	}
-
-	@Test
-	public void testRandomStringInserts() {
-		String[] strings = this.randomStrings(10000, 5000);
-		for (String string : strings) {
-			//int insertPosition = 
-		}
-		
-	}
-	
 }
