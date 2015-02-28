@@ -65,7 +65,7 @@ public class HashTable<K, E> {
 			this.size--;
 		}
 		return deleted;
-	}
+	}	
 	
 	class KeyValuePair<K, E> {
 		K key;

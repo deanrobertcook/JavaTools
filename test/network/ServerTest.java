@@ -5,10 +5,7 @@
  */
 package network;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
 
 /**
@@ -32,9 +29,9 @@ public class ServerTest {
 
 	@Test
 	public void testSingleClient() {
-		Client client = new Client(hostName, portNumber);
+		SimpleClient client = new SimpleClient(hostName, portNumber);
 		new Thread(() -> {
-			client.sendMessage("Client's message to server");
+			client.sendStringMessage("Client's message to server");
 		}).start();
 	}
 
@@ -42,12 +39,12 @@ public class ServerTest {
 	public void testSeveralClients() {
 		Client[] clients = new Client[maxClients + 1];
 		for (int i = 0; i < clients.length; i++) {
-			Client client = new Client(hostName, portNumber);
+			SimpleClient client = new SimpleClient(hostName, portNumber);
 			final int clientId = i;
 			new Thread(new Runnable() {
 				@Override
 				public void run() {
-					client.sendMessage("Client " + clientId + "'s message to server");
+					client.sendStringMessage("Client " + clientId + "'s message to server");
 					try {
 						this.wait();
 					} catch (InterruptedException e) {
