@@ -22,11 +22,11 @@ public class LinkedList<E> implements List<E> {
 	 * @return 
 	 */
 	protected Node<E> makeNode() {
-		return new Node<E>();
+		return new Node<>();
 	}
 	
-	protected Node<E> makeNode(E value) {
-		return new Node<E>(value);
+	protected Node<E> makeNode(E element) {
+		return new Node<E>(element);
 	}
 
 	@Override
@@ -41,8 +41,8 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public void insert(E value, int index) {
-		Node<E> newNode = this.makeNode(value);
+	public void insert(E element, int index) {
+		Node<E> newNode = this.makeNode(element);
 		if (index == 0) {
 			newNode.replaceTail(this.first);
 			this.first = newNode;
@@ -60,15 +60,15 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public int search(E value) {
+	public int search(E element) {
 		if (this.size > 0) {
 			Node<E> current = this.first;
 			int index = 0;
-			while (current.value() != value && current.hasNext()) {
+			while (!current.element().equals(element) && current.hasNext()) {
 				current = current.getNext();
 				index++;
 			}
-			if (current.value() == value) {
+			if (current.element().equals(element)) {
 				return index;
 			}
 		}
@@ -76,16 +76,16 @@ public class LinkedList<E> implements List<E> {
 	}
 
 	@Override
-	public boolean delete(E value) {
+	public boolean delete(E element) {
 		if (this.size > 0) {
 
 			Node<E> current = this.first;
 			Node<E> previousNode = null;
-			while (current.value() != value && current.hasNext()) {
+			while (!current.element().equals(element) && current.hasNext()) {
 				previousNode = current;
 				current = current.getNext();
 			}
-			if (current.value() == value) { //found the element
+			if (current.element().equals(element)) { //found the element
 				if (previousNode != null && current.hasNext()) {
 					//neither first nor last element
 					Node<E> nextNode = current.getNext();
@@ -108,7 +108,7 @@ public class LinkedList<E> implements List<E> {
 				//should have been removed!!
 				this.size--;
 				return true;
-			} else { //coudln't find value
+			} else { //coudln't find element
 				return false;
 			}
 		}
@@ -128,7 +128,7 @@ public class LinkedList<E> implements List<E> {
 	@Override
 	public E get(int index) {
 		Node<E> node = this.getNode(index);
-		return node.value();
+		return node.element();
 	}
 
 	private Node<E> getNode(int index) {
