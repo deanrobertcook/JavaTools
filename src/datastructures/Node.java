@@ -2,25 +2,25 @@ package datastructures;
 
 public class Node<E> {
 	
-	private Node<E> tail;
-	private E value;
+	protected Node<E> tail;
+	protected E element;
 	
 	public Node() {}
 	
-	public Node(E value) {
-		this.value = value;
+	public Node(E element) {
+		this.element = element;
 	}
 	
 	public boolean isEmpty() {
-		return this.value == null;
+		return this.element == null;
 	}
 	
-	public E value() {
-		return this.value;
+	public E element() {
+		return this.element;
 	}
 	
 	public void update(E element) {
-		this.value = element;
+		this.element = element;
 	}
 	
 	public boolean hasNext() {
@@ -34,9 +34,9 @@ public class Node<E> {
 		return null;
 	}
 	
-	public void insertAfter(E value) {
+	public void insertAfter(E element) {
 		if (!this.hasNext()) {
-			this.tail = new Node<>(value);
+			this.tail = new Node<>(element);
 		}
 	}
 	
