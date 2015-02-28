@@ -1,8 +1,5 @@
 package datastructures;
 
-import java.util.Objects;
-import utility.Util;
-
 /**
  *
  * @author dean
@@ -10,6 +7,7 @@ import utility.Util;
 public class HashTable<K, E> {
 
 	private LinkedList<KeyValuePair<K, E>>[] backingArray;
+	private int size;
 
 	public HashTable() {
 		this(10);
@@ -26,6 +24,7 @@ public class HashTable<K, E> {
 		int hash = this.hash(key);
 		KeyValuePair<K, E> keyValuePair = new KeyValuePair<>(key, value);
 		this.backingArray[hash].insert(keyValuePair);
+		this.size++;
 	}
 
 	private int hash(K key) {
@@ -48,15 +47,33 @@ public class HashTable<K, E> {
 
 	public E get(K key) {
 		int hash = this.hash(key);
-		KeyValuePair<K, E> searchKey = new KeyValuePair<>(key, null);
+		KeyValuePair<K, E> searchKey = new KeyValuePair<>(key);
 		int listIndex = this.backingArray[hash].search(searchKey);
 		KeyValuePair<K, E> keyValuePair = this.backingArray[hash].get(listIndex);
 		return keyValuePair.value;
+	}
+
+	public int size() {
+		return this.size;
+	}
+
+	boolean delete(K key) {
+		int hash = this.hash(key);
+		KeyValuePair<K, E> searchKey = new KeyValuePair<>(key);
+		boolean deleted = this.backingArray[hash].delete(searchKey);
+		if (deleted) {
+			this.size--;
+		}
+		return deleted;
 	}
 	
 	class KeyValuePair<K, E> {
 		K key;
 		E value;
+		
+		public KeyValuePair(K key) {
+			this(key, null);
+		}
 
 		public KeyValuePair(K key, E value) {
 			this.key = key;
