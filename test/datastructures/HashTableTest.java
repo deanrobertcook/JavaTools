@@ -7,6 +7,7 @@ package datastructures;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import testutility.TestMethods;
 
 /**
@@ -15,20 +16,26 @@ import testutility.TestMethods;
  */
 public class HashTableTest extends TestMethods {
 	
+	HashTable<String, String> hashTable;
+	
+	@Before
+	public void setUpHashTable() {
+		this.hashTable = new HashTable<>();
+	}
+	
 	@Test
 	public void testSimpleInsertAndGet() {
-		HashTable hashTable = new HashTable();
 		String index = "index";
 		String value = "value";
 		
-		hashTable.insert(index, value);
+		this.hashTable.insert(index, value);
 		
 		assertEquals(value, hashTable.get(index));
 	}
 	
 	@Test
 	public void testMultipleInsertsAndGets() {
-		String[] indices = {
+		String[] keys = {
 			"index1",
 			"index2",
 			"index3",
@@ -39,26 +46,24 @@ public class HashTableTest extends TestMethods {
 			"value3",
 		};
 		
-		HashTable hashTable = new HashTable();
-		for (int i = 0; i < indices.length; i++) {
-			hashTable.insert(indices[i], values[i]);
+		for (int i = 0; i < keys.length; i++) {
+			this.hashTable.insert(keys[i], values[i]);
 		}
-		for (int i = 0; i < indices.length; i++) {
-			assertEquals(values[i], hashTable.get(indices[i]));
+		for (int i = 0; i < keys.length; i++) {
+			assertEquals(values[i], this.hashTable.get(keys[i]));
 		}
 	}
 	
 	@Test
 	public void testMediumInsertsAndGets() {
-		String[] indices = this.randomStrings(50, 10);
+		String[] keys = this.randomStrings(50, 10);
 		String[] values = this.randomStrings(50, 50);
 		
-		HashTable hashTable = new HashTable();
-		for (int i = 0; i < indices.length; i++) {
-			hashTable.insert(indices[i], values[i]);
+		for (int i = 0; i < keys.length; i++) {
+			this.hashTable.insert(keys[i], values[i]);
 		}
-		for (int i = 0; i < indices.length; i++) {
-			assertEquals(values[i], hashTable.get(indices[i]));
+		for (int i = 0; i < keys.length; i++) {
+			assertEquals(values[i], this.hashTable.get(keys[i]));
 		}
 	}
 	
