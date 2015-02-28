@@ -1,8 +1,12 @@
 package network;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import utility.Util;
 
 /**
@@ -15,12 +19,19 @@ public class Server {
 	private boolean listening = true;
 	private final int maxThreads;
 	private boolean[] threadIds;
+	private String ipAddress;
 
 	public Server(int portNumber) {
 		this(portNumber, 1);
 	}
 	
 	public Server(int portNumber, int maxThreads) {
+		try {
+			this.ipAddress = InetAddress.getLocalHost().getHostAddress();
+			System.out.println("Current IP Address: " + this.ipAddress);
+		} catch (UnknownHostException ex) {
+			System.err.println(ex.getMessage());
+		}
 		this.portNumber = portNumber;
 		this.maxThreads = maxThreads;
 		this.threadIds = new boolean[this.maxThreads];
@@ -35,6 +46,8 @@ public class Server {
 		this.serverSocket = socket;
 		
 	}
+	
+	
 
 	public void listen() {
 		while (listening) {
