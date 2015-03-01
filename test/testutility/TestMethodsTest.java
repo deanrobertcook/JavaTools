@@ -1,6 +1,6 @@
 package testutility;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
 import utility.Util;
 
@@ -57,7 +57,7 @@ public class TestMethodsTest extends TestMethods {
 				System.out.println("Array MaxLength: " + maxLength);
 				System.out.println("Array Length: " + A.length);
 				System.out.println("Array MinLength: " + minLength);
-				Assert.fail("Array length outside of specified");
+				fail("Array length outside of specified");
 			}
 
 			int arrayMinPos = Util.findMinimumPos(A);
@@ -66,7 +66,7 @@ public class TestMethodsTest extends TestMethods {
 				System.out.println("Array Defined Min: " + minVal);
 				System.out.println("Array Min Value: " + A[arrayMinPos]);
 				Util.printArray(A);
-				Assert.fail("Minimum value falls below defined range");
+				fail("Minimum value falls below defined range");
 			}
 			int arrayMaxPos = Util.findMaximumPos(A);
 			if (arrayMinPos > 0 && A[arrayMaxPos] > maxVal) {
@@ -74,7 +74,7 @@ public class TestMethodsTest extends TestMethods {
 				System.out.println("Array Defined Max: " + maxVal);
 				System.out.println("Array Max Value: " + A[arrayMaxPos]);
 				Util.printArray(A);
-				Assert.fail("Maximum value falls above defined range");
+				fail("Maximum value falls above defined range");
 			}
 	}
 	
@@ -84,5 +84,14 @@ public class TestMethodsTest extends TestMethods {
 		System.out.println("int minVal = " + minVal + ";");
 		System.out.println("int maxVal = " + maxVal + ";");
 		System.out.println("------------------------------");
+	}
+	
+	@Test
+	public void testRemoveDuplicates() {
+		String[] strings = {"a","b","c","a","b","d","e", "b"};
+		String[] expected = {"c", "a", "d", "e", "b"};
+		strings = this.removeDuplicates(strings);
+		
+		assertArrayEquals(expected, strings);
 	}
 }

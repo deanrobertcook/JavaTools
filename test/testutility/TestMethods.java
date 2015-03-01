@@ -1,5 +1,6 @@
 package testutility;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -118,6 +119,29 @@ public class TestMethods {
 			strings[i] = this.randomString(stringLength);
 		}
 		return strings;
+	}
+	
+	public String[] removeDuplicates(String[] strings) {
+		int duplicates = 0;
+		for (int i = 0; i < strings.length - 1; i++) {
+			for (int j = i + 1; j < strings.length; j++) {
+				if (strings[i] != null && strings[i].equals(strings[j])) {
+					duplicates++;
+					strings[i] = null;
+				}
+			}
+		}
+		
+		String[] uniqueStrings = new String[strings.length - duplicates];
+		int uniqueIndex = 0;
+		for (String string : strings) {
+			if (string != null) {
+				uniqueStrings[uniqueIndex] = string;
+				uniqueIndex++;
+			}
+		}
+		
+		return uniqueStrings;
 	}
 	
 	public String randomStringContaining(int length, String chars) {
