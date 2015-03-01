@@ -69,7 +69,12 @@ public class Util {
 		System.out.println("Array Size: " + A.length);
 		System.out.printf("%-" + (columnLength + 2) + "s%s\n", "Index", "Value");
 		for (int i = 0; i < A.length; i++) {
-			System.out.printf("%-" + columnLength + "s%s;\n", "A[" + i + "]", "= " + A[i]);
+			if (A[i] instanceof String) {
+				//include quotes for strings to make printed array copiable
+				System.out.printf("%-" + columnLength + "s%s;\n", "A[" + i + "]", "= \"" + A[i] + "\"");
+			} else {
+				System.out.printf("%-" + columnLength + "s%s;\n", "A[" + i + "]", "= " + A[i]);
+			}
 		}
 		System.out.println("------------------------------------");
 	}
