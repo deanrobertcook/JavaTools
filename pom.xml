@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.dean.learning</groupId>
+	<artifactId>java-tools</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Java Tools</name>
+	<description>A project containing all sorts of useful Java classes, like networking classes, graph classes etc. that I've made for learning and re-use</description>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+	</dependencies>
+</project>
