@@ -26,7 +26,7 @@ public class TestMethodsTest extends TestMethods {
 				minVal = temp;
 			}
 			
-			int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
+			int[] A = this.randomInts(minLength, maxLength, minVal, maxVal);
 			this.checkArrayIsinSpecifiedRanges(A, minLength, maxLength, minVal, maxVal);
 		}
 	}
@@ -37,7 +37,7 @@ public class TestMethodsTest extends TestMethods {
 		int maxLength = 86;
 		int minVal = -1163510201;
 		int maxVal = 1816014807;
-		int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
+		int[] A = this.randomInts(minLength, maxLength, minVal, maxVal);
 		this.checkArrayIsinSpecifiedRanges(A, minLength, maxLength, minVal, maxVal);
 	}
 	
@@ -47,7 +47,7 @@ public class TestMethodsTest extends TestMethods {
 		int maxLength = 50;
 		int minVal = 100;
 		int maxVal = 100;
-		int[] A = this.randomIntegers(minLength, maxLength, minVal, maxVal);
+		int[] A = this.randomInts(minLength, maxLength, minVal, maxVal);
 		this.checkArrayIsinSpecifiedRanges(A, minLength, maxLength, minVal, maxVal);
 	}
 	

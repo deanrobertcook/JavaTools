@@ -77,7 +77,7 @@ public class TestMethods {
 		int[][] arrays = new int[numArrays][];
 		for (int i = 0; i < numArrays; i++) {
 			int arraySize = 1 * (int) Math.pow((double) 10, (double) (i));
-			int[] array = this.randomIntegers(arraySize, arraySize, Integer.MIN_VALUE, Integer.MAX_VALUE);
+			int[] array = this.randomInts(arraySize, arraySize, Integer.MIN_VALUE, Integer.MAX_VALUE);
 			arrays[i] = array;
 		}
 		return arrays;
@@ -87,12 +87,12 @@ public class TestMethods {
 			int maxLength, int minVal, int maxVal) {
 		int[][] arrays = new int[numArrays][];
 		for (int i = 0; i < arrays.length; i++) {
-			arrays[i] = this.randomIntegers(minLength, maxLength,  minVal, maxVal);
+			arrays[i] = this.randomInts(minLength, maxLength,  minVal, maxVal);
 		}
 		return arrays;
 	}
 
-	public int[] randomIntegers(int minLength, int maxLength, int minVal, int maxVal) {
+	public int[] randomInts(int minLength, int maxLength, int minVal, int maxVal) {
 		int arrayLength = this.randomGenerator.nextInt(maxLength + 1);
 		if (minLength > 0) {
 			int lengthRange = maxLength - minLength + 1;
@@ -110,6 +110,16 @@ public class TestMethods {
 			array[i] = (int) rand;
 		}
 		return array;
+	}
+	
+	public Integer[] randomIntegers (int minLength, int maxLength, int minVal, int maxVal) {
+		int[] intArray = randomInts(minLength, maxLength, minVal, maxVal);
+		Integer[] integerArray = new Integer[intArray.length];
+		
+		for (int i = 0; i < intArray.length; i++) {
+			integerArray[i] = intArray[i];
+		}
+		return integerArray;
 	}
 
 	public String[] randomStrings(int numStrings, int maxStringLength) {
