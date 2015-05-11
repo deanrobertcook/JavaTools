@@ -1,10 +1,11 @@
-package tools.utility;
+package tools.sort;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import tools.testutility.TestMethods;
+import tools.utility.Util;
 
 public class QuickSortTest extends TestMethods{
 
@@ -13,7 +14,7 @@ public class QuickSortTest extends TestMethods{
 		Integer[] A = this.randomIntegers(0, 20, 0, 50);
 		
 		Util.printArray(A);
-		QuickSort.sort(A);
+		new QuickSorter<Integer>().sort(A);
 		Util.printArray(A);
 	}
 	
@@ -22,7 +23,7 @@ public class QuickSortTest extends TestMethods{
 		String[] A = randomStrings(20, 10);
 		
 		Util.printArray(A);
-		QuickSort.sort(A);
+		new QuickSorter<String>().sort(A);
 		Util.printArray(A);
 	}
 	

@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tools.utility;
+package tools.sort;
 
+import tools.sort.MergeSort;
 import tools.testutility.TestMethods;
+import tools.utility.Util;
+
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
