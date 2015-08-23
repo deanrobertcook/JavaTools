@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed026519-723a-4674-a807-57c8df1e3063" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_googlecode_charts4j_charts4j_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/test.iml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/JavaFXRunner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/theronin/javatools/neuralnetworks/PerceptronTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/theronin/javatools/neuralnetworks/PerceptronTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,98 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PerceptronTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/neuralnetworks/PerceptronTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.4025157">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1542#1558#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Font.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/text/Font.java">
+      <file leaf-file-name="Perceptron.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/theronin/javatools/neuralnetworks/Perceptron.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="306" column="11" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XYChart.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/XYChart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1287" column="60" selection-start-line="1287" selection-start-column="60" selection-end-line="1287" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tooltip.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Tooltip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="133" column="24" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Label.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Label.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
-              <folding>
-                <element signature="e#1673#1674#0" expanded="true" />
-                <element signature="e#1701#1702#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Platform.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/application/Platform.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JFXPanel.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/embed/swing/JFXPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="265" column="11" selection-start-line="265" selection-start-column="11" selection-end-line="265" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="300" column="48" selection-start-line="300" selection-start-column="42" selection-end-line="300" selection-end-column="48" />
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -139,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -470,6 +394,9 @@
         <option value="$PROJECT_DIR$/src/test/test.iml" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/GraphThread.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/PlotThread.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/JavaFXRunner.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/theronin/javatools/neuralnetworks/PerceptronTest.java" />
       </list>
     </option>
@@ -546,6 +473,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -730,6 +668,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="testutility" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaTools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javatools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="neuralnetworks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -751,20 +719,17 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="JavaTools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javatools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1160,14 +1125,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="820" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32756326" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1176,16 +1144,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39946738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756326" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39946738" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1210,34 +1175,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/neuralnetworks/HopfieldTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/sort/QuickSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/sort/MergeSortTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/theronin/javatools/sort/MergeSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/theronin/javatools/sort/QuickSorter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1256,6 +1193,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1427,13 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/TestMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="47" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/utility/UtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5031447">
@@ -1459,13 +1390,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/theronin/javatools/neuralnetworks/Perceptron.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,6 +1398,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02538071">
           <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1487,6 +1413,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,19 +1439,253 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="300" column="48" selection-start-line="300" selection-start-column="42" selection-end-line="300" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/embed/swing/JFXPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="265" column="11" selection-start-line="265" selection-start-column="11" selection-end-line="265" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="e#0#35830#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#9289#9290#0" expanded="false" />
+            <element signature="e#9317#9318#0" expanded="false" />
+            <element signature="e#11696#11697#0" expanded="false" />
+            <element signature="e#11724#11725#0" expanded="false" />
+            <element signature="e#26381#26382#0" expanded="false" />
+            <element signature="e#26432#26433#0" expanded="false" />
+            <element signature="e#32626#32627#0" expanded="false" />
+            <element signature="e#32679#32680#0" expanded="false" />
+            <element signature="e#33606#33607#0" expanded="false" />
+            <element signature="e#33665#33666#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Tooltip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="24" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41224#0" expanded="false" />
+            <element signature="e#4414#4415#0" expanded="false" />
+            <element signature="e#4455#4456#0" expanded="false" />
+            <element signature="e#4730#4731#0" expanded="false" />
+            <element signature="e#4770#4771#0" expanded="false" />
+            <element signature="e#5284#5285#0" expanded="false" />
+            <element signature="e#5310#5311#0" expanded="false" />
+            <element signature="e#7171#7172#0" expanded="false" />
+            <element signature="e#7209#7210#0" expanded="false" />
+            <element signature="e#7271#7272#0" expanded="false" />
+            <element signature="e#7326#7327#0" expanded="false" />
+            <element signature="e#7378#7379#0" expanded="false" />
+            <element signature="e#7435#7436#0" expanded="false" />
+            <element signature="e#7826#7827#0" expanded="false" />
+            <element signature="e#7860#7861#0" expanded="false" />
+            <element signature="e#7919#7920#0" expanded="false" />
+            <element signature="e#7972#7973#0" expanded="false" />
+            <element signature="e#8021#8022#0" expanded="false" />
+            <element signature="e#8076#8077#0" expanded="false" />
+            <element signature="e#8469#8470#0" expanded="false" />
+            <element signature="e#8500#8501#0" expanded="false" />
+            <element signature="e#8551#8552#0" expanded="false" />
+            <element signature="e#8601#8602#0" expanded="false" />
+            <element signature="e#8641#8642#0" expanded="false" />
+            <element signature="e#8693#8694#0" expanded="false" />
+            <element signature="e#9180#9181#0" expanded="false" />
+            <element signature="e#9207#9208#0" expanded="false" />
+            <element signature="e#9251#9252#0" expanded="false" />
+            <element signature="e#9297#9298#0" expanded="false" />
+            <element signature="e#9331#9332#0" expanded="false" />
+            <element signature="e#9379#9380#0" expanded="false" />
+            <element signature="e#10791#10792#0" expanded="false" />
+            <element signature="e#10826#10827#0" expanded="false" />
+            <element signature="e#10871#10872#0" expanded="false" />
+            <element signature="e#10914#10915#0" expanded="false" />
+            <element signature="e#10959#10960#0" expanded="false" />
+            <element signature="e#10996#10997#0" expanded="false" />
+            <element signature="e#11488#11489#0" expanded="false" />
+            <element signature="e#11518#11519#0" expanded="false" />
+            <element signature="e#11565#11566#0" expanded="false" />
+            <element signature="e#11614#11615#0" expanded="false" />
+            <element signature="e#11651#11652#0" expanded="false" />
+            <element signature="e#11702#11703#0" expanded="false" />
+            <element signature="e#11961#11962#0" expanded="false" />
+            <element signature="e#11999#12000#0" expanded="false" />
+            <element signature="e#12044#12045#0" expanded="false" />
+            <element signature="e#12087#12088#0" expanded="false" />
+            <element signature="e#12132#12133#0" expanded="false" />
+            <element signature="e#12172#12173#0" expanded="false" />
+            <element signature="e#16880#16881#0" expanded="false" />
+            <element signature="e#16939#16940#0" expanded="false" />
+            <element signature="e#16992#16993#0" expanded="false" />
+            <element signature="e#17049#17050#0" expanded="false" />
+            <element signature="e#17140#17141#0" expanded="false" />
+            <element signature="e#17194#17195#0" expanded="false" />
+            <element signature="e#17466#17467#0" expanded="false" />
+            <element signature="e#17503#17504#0" expanded="false" />
+            <element signature="e#17567#17568#0" expanded="false" />
+            <element signature="e#17623#17624#0" expanded="false" />
+            <element signature="e#17677#17678#0" expanded="false" />
+            <element signature="e#17735#17736#0" expanded="false" />
+            <element signature="e#18044#18045#0" expanded="false" />
+            <element signature="e#18081#18082#0" expanded="false" />
+            <element signature="e#18137#18138#0" expanded="false" />
+            <element signature="e#18193#18194#0" expanded="false" />
+            <element signature="e#18239#18240#0" expanded="false" />
+            <element signature="e#18297#18298#0" expanded="false" />
+            <element signature="e#19576#19577#0" expanded="false" />
+            <element signature="e#19620#19621#0" expanded="false" />
+            <element signature="e#25879#25880#0" expanded="false" />
+            <element signature="e#25912#25913#0" expanded="false" />
+            <element signature="e#26061#26062#0" expanded="false" />
+            <element signature="e#26105#26106#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Label.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#6546#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4648#4649#0" expanded="false" />
+            <element signature="e#4705#4706#0" expanded="false" />
+            <element signature="e#4758#4759#0" expanded="false" />
+            <element signature="e#4815#4816#0" expanded="false" />
+            <element signature="e#5582#5583#0" expanded="false" />
+            <element signature="e#5624#5625#0" expanded="false" />
+            <element signature="e#6506#6507#0" expanded="false" />
+            <element signature="e#6542#6543#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/XYChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1287" column="60" selection-start-line="1287" selection-start-column="60" selection-end-line="1287" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#70348#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#7959#7960#0" expanded="false" />
+            <element signature="e#8032#8033#0" expanded="false" />
+            <element signature="e#8447#8448#0" expanded="false" />
+            <element signature="e#8512#8513#0" expanded="false" />
+            <element signature="e#8856#8857#0" expanded="false" />
+            <element signature="e#8899#8900#0" expanded="false" />
+            <element signature="e#8934#8935#0" expanded="false" />
+            <element signature="e#8971#8972#0" expanded="false" />
+            <element signature="e#9442#9443#0" expanded="false" />
+            <element signature="e#9486#9487#0" expanded="false" />
+            <element signature="e#9539#9540#0" expanded="false" />
+            <element signature="e#9582#9583#0" expanded="false" />
+            <element signature="e#9635#9636#0" expanded="false" />
+            <element signature="e#9692#9693#0" expanded="false" />
+            <element signature="e#10564#10565#0" expanded="false" />
+            <element signature="e#10608#10609#0" expanded="false" />
+            <element signature="e#10661#10662#0" expanded="false" />
+            <element signature="e#10704#10705#0" expanded="false" />
+            <element signature="e#10757#10758#0" expanded="false" />
+            <element signature="e#10816#10817#0" expanded="false" />
+            <element signature="e#11525#11526#0" expanded="false" />
+            <element signature="e#11569#11570#0" expanded="false" />
+            <element signature="e#11622#11623#0" expanded="false" />
+            <element signature="e#11665#11666#0" expanded="false" />
+            <element signature="e#11718#11719#0" expanded="false" />
+            <element signature="e#11779#11780#0" expanded="false" />
+            <element signature="e#12508#12509#0" expanded="false" />
+            <element signature="e#12552#12553#0" expanded="false" />
+            <element signature="e#12605#12606#0" expanded="false" />
+            <element signature="e#12648#12649#0" expanded="false" />
+            <element signature="e#12701#12702#0" expanded="false" />
+            <element signature="e#12759#12760#0" expanded="false" />
+            <element signature="e#13596#13597#0" expanded="false" />
+            <element signature="e#13640#13641#0" expanded="false" />
+            <element signature="e#13693#13694#0" expanded="false" />
+            <element signature="e#13736#13737#0" expanded="false" />
+            <element signature="e#13789#13790#0" expanded="false" />
+            <element signature="e#13845#13846#0" expanded="false" />
+            <element signature="e#14662#14663#0" expanded="false" />
+            <element signature="e#14706#14707#0" expanded="false" />
+            <element signature="e#14759#14760#0" expanded="false" />
+            <element signature="e#14802#14803#0" expanded="false" />
+            <element signature="e#14855#14856#0" expanded="false" />
+            <element signature="e#14913#14914#0" expanded="false" />
+            <element signature="e#15813#15814#0" expanded="false" />
+            <element signature="e#15861#15862#0" expanded="false" />
+            <element signature="e#24916#24917#0" expanded="false" />
+            <element signature="e#24950#24951#0" expanded="false" />
+            <element signature="e#37462#37463#0" expanded="false" />
+            <element signature="e#37516#37517#0" expanded="false" />
+            <element signature="e#37648#37649#0" expanded="false" />
+            <element signature="e#37693#37694#0" expanded="false" />
+            <element signature="e#49264#49265#0" expanded="false" />
+            <element signature="e#49308#49309#0" expanded="false" />
+            <element signature="e#49827#49828#0" expanded="false" />
+            <element signature="e#49871#49872#0" expanded="false" />
+            <element signature="e#50635#50636#0" expanded="false" />
+            <element signature="e#50683#50684#0" expanded="false" />
+            <element signature="e#50744#50745#0" expanded="false" />
+            <element signature="e#50791#50792#0" expanded="false" />
+            <element signature="e#52566#52567#0" expanded="false" />
+            <element signature="e#52614#52615#0" expanded="false" />
+            <element signature="e#52675#52676#0" expanded="false" />
+            <element signature="e#52722#52723#0" expanded="false" />
+            <element signature="e#54421#54422#0" expanded="false" />
+            <element signature="e#54469#54470#0" expanded="false" />
+            <element signature="e#54530#54531#0" expanded="false" />
+            <element signature="e#54581#54582#0" expanded="false" />
+            <element signature="e#60118#60119#0" expanded="false" />
+            <element signature="e#60208#60209#0" expanded="false" />
+            <element signature="e#64830#64831#0" expanded="false" />
+            <element signature="e#64880#64881#0" expanded="false" />
+            <element signature="e#64941#64942#0" expanded="false" />
+            <element signature="e#64986#64987#0" expanded="false" />
+            <element signature="e#67174#67175#0" expanded="false" />
+            <element signature="e#67255#67256#0" expanded="false" />
+            <element signature="e#67699#67700#0" expanded="false" />
+            <element signature="e#67772#67773#0" expanded="false" />
+            <element signature="e#67920#67921#0" expanded="false" />
+            <element signature="e#67970#67971#0" expanded="false" />
+            <element signature="e#68031#68032#0" expanded="false" />
+            <element signature="e#68076#68077#0" expanded="false" />
+            <element signature="e#68534#68535#0" expanded="false" />
+            <element signature="e#68610#68611#0" expanded="false" />
+            <element signature="e#69614#69615#0" expanded="false" />
+            <element signature="e#69668#69669#0" expanded="false" />
+            <element signature="e#70107#70108#0" expanded="false" />
+            <element signature="e#70165#70166#0" expanded="false" />
+            <element signature="e#70202#70203#0" expanded="false" />
+            <element signature="e#70253#70254#0" expanded="false" />
+            <element signature="e#70282#70283#0" expanded="false" />
+            <element signature="e#70333#70334#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/text/Font.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="306" column="11" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#20754#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2931#2932#0" expanded="false" />
+            <element signature="e#3004#3005#0" expanded="false" />
+            <element signature="e#3386#3387#0" expanded="false" />
+            <element signature="e#3460#3461#0" expanded="false" />
+            <element signature="e#5889#5890#0" expanded="false" />
+            <element signature="e#5944#5945#0" expanded="false" />
+            <element signature="e#7439#7440#0" expanded="false" />
+            <element signature="e#7492#7493#0" expanded="false" />
+            <element signature="e#8012#8013#0" expanded="false" />
+            <element signature="e#8063#8064#0" expanded="false" />
+            <element signature="e#8611#8612#0" expanded="false" />
+            <element signature="e#8662#8663#0" expanded="false" />
+            <element signature="e#11283#11284#0" expanded="false" />
+            <element signature="e#11315#11316#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1536,49 +1697,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Tooltip.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="133" column="24" selection-start-line="133" selection-start-column="17" selection-end-line="133" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Label.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="11" selection-start-line="81" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
-          <folding>
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1701#1702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/chart/XYChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1287" column="60" selection-start-line="1287" selection-start-column="60" selection-end-line="1287" selection-end-column="60" />
+          <caret line="304" column="25" selection-start-line="304" selection-start-column="25" selection-end-line="304" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/scene/text/Font.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/application/PlatformImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="306" column="11" selection-start-line="306" selection-start-column="11" selection-end-line="306" selection-end-column="11" />
+          <caret line="439" column="23" selection-start-line="439" selection-start-column="23" selection-end-line="439" selection-end-column="23" />
+          <folding>
+            <element signature="e#10764#10765#0" expanded="true" />
+            <element signature="e#10800#10801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9559748">
+          <caret line="140" column="6" selection-start-line="140" selection-start-column="6" selection-end-line="140" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/TestMethodsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5597484">
+          <caret line="112" column="47" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/javafx-src.zip!/javafx/stage/Stage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36477986">
+          <caret line="254" column="32" selection-start-line="254" selection-start-column="32" selection-end-line="254" selection-end-column="32" />
+          <folding>
+            <element signature="e#8257#8258#0" expanded="true" />
+            <element signature="e#8285#8286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/testutility/JavaFXRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5345912">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/theronin/javatools/neuralnetworks/Perceptron.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/theronin/javatools/neuralnetworks/PerceptronTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="70" selection-start-line="48" selection-start-column="70" selection-end-line="48" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.4025157">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1542#1558#0" expanded="true" />
           </folding>
         </state>
       </provider>
