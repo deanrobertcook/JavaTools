@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+description 'A project containing all sorts of useful Java classes, like networking classes, graph classes etc. that I\'ve made for learning and re-use'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name:'junit', version:'4.12'
+}
