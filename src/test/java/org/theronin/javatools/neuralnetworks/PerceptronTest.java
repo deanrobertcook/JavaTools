@@ -17,7 +17,5 @@ public class PerceptronTest extends TestMethods {
             int result = perceptron.feedForward(points[i]);
             System.out.println("result: " + result);
         }
-
-
     }
 }
