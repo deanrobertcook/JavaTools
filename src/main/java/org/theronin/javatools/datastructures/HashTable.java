@@ -6,7 +6,7 @@ package org.theronin.javatools.datastructures;
  */
 public class HashTable<K, E> {
 
-	private LinkedList<KeyValuePair<K, E>>[] backingArray;
+	private MyLinkedList<KeyValuePair<K, E>>[] backingArray;
 	private int size;
 
 	public HashTable() {
@@ -14,9 +14,9 @@ public class HashTable<K, E> {
 	}
 
 	public HashTable(int initialSize) {
-		this.backingArray = new LinkedList[initialSize];
+		this.backingArray = new MyLinkedList[initialSize];
 		for (int i = 0; i < backingArray.length; i++) {
-			backingArray[i] = new LinkedList<>();
+			backingArray[i] = new MyLinkedList<>();
 		}
 	}
 

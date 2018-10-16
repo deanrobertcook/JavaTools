@@ -5,13 +5,13 @@ package org.theronin.javatools.datastructures;
  * @author dean
  * @param <E>
  */
-public class LinkedList<E> implements List<E> {
+public class MyLinkedList<E> implements List<E> {
 
 	private Node<E> first;
 	private Node<E> last;
 	private int size;
 
-	public LinkedList() {
+	public MyLinkedList() {
 		this.first = this.makeNode();
 		this.last = this.first;
 		this.size = 0;

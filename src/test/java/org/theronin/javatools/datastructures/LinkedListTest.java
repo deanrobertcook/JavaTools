@@ -11,11 +11,11 @@ import static org.junit.Assert.*;
  * @author dean
  */
 public class LinkedListTest extends TestMethods {
-	private LinkedList<String> list;
+	private MyLinkedList<String> list;
 
 	@Before
 	public void setUpEmptyList() {
-		 list = new LinkedList<>();
+		 list = new MyLinkedList<>();
 	}
 	
 	@Test
